@@ -39,6 +39,8 @@ body {
   font-weight: 400;
   line-height: 1.8;
   letter-spacing: 0.04em;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 img {
@@ -761,6 +763,10 @@ h3 {
 }
 
 @media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+
   .header-cta {
     display: none;
   }
@@ -779,12 +785,15 @@ h3 {
   }
 
   .nav.is-open a {
-    padding: 12px 24px;
+    padding: 14px 24px;
+    font-size: 13px;
   }
 
   .menu-btn {
     display: grid;
     place-items: center;
+    width: 44px;
+    height: 44px;
   }
 
   .header-inner {
@@ -813,6 +822,27 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding-bottom: 48px;
+    padding: calc(var(--header-h) + 28px) 0 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 8.2vw, 40px);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .wrap {
+    width: min(var(--max), calc(100% - 32px));
+  }
+
+  .section {
+    padding: 64px 0;
   }
 }

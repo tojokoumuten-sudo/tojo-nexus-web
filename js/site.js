@@ -4,6 +4,7 @@ const NAV = [
   { href: "service.html", label: "SERVICE" },
   { href: "bim.html", label: "BIM" },
   { href: "career.html", label: "CAREER" },
+  { href: "contact.html", label: "CONTACT" },
 ];
 
 const LOGO =
