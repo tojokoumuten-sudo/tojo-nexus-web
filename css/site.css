@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap");
+
 :root {
   --bg: #0b0d10;
   --bg-2: #12161c;
@@ -15,6 +17,7 @@
   --header-h: 76px;
   --max: 1240px;
   --serif: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+  --en: "Cormorant Garamond", "Times New Roman", serif;
   --sans: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", sans-serif;
 }
 
@@ -93,6 +96,65 @@ h3 {
   letter-spacing: 0.06em;
   line-height: 1.35;
   margin: 0;
+}
+
+.en-line {
+  display: block;
+  margin-top: 0.5em;
+  font-family: var(--en);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.42em;
+  letter-spacing: 0.03em;
+  line-height: 1.45;
+  color: var(--brass);
+}
+
+.section-paper .en-line,
+.section-paper h2 .en-line {
+  color: #8a5a38;
+}
+
+.lang-mark {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: rgba(247, 244, 238, 0.45);
+  white-space: nowrap;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.lbl i,
+.th-en {
+  font-family: var(--en);
+  font-style: italic;
+  font-weight: 500;
+  opacity: 0.55;
+  margin-left: 0.45em;
+  letter-spacing: 0.03em;
+  text-transform: none;
+}
+
+.bilingual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 72px;
+  max-width: none;
+}
+
+.bilingual p[lang="en"] {
+  font-size: 0.92em;
+  letter-spacing: 0.02em;
+  line-height: 1.75;
+  color: rgba(247, 244, 238, 0.62);
+}
+
+.section-paper .bilingual p[lang="en"] {
+  color: var(--muted-dark);
 }
 
 /* Header */
@@ -175,14 +237,25 @@ h3 {
 
 .header-cta {
   display: inline-flex;
-  align-items: center;
-  height: 38px;
-  padding: 0 18px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 42px;
+  padding: 6px 16px;
   border: 1px solid var(--accent);
   background: var(--accent);
   color: #fff;
   font-size: 12px;
   letter-spacing: 0.12em;
+  line-height: 1.2;
+}
+
+.header-cta small {
+  font-family: var(--en);
+  font-style: italic;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  opacity: 0.85;
 }
 
 .header-cta:hover {
@@ -250,17 +323,33 @@ h3 {
 }
 
 .hero h1 {
-  max-width: 14em;
+  max-width: 16em;
   font-size: clamp(36px, 6vw, 72px);
   line-height: 1.22;
   margin: 18px 0 28px;
 }
 
+.hero h1 .en-line {
+  max-width: 22em;
+  font-size: clamp(18px, 2.2vw, 28px);
+  color: var(--brass);
+}
+
 .hero-lead {
-  max-width: 36em;
+  max-width: 38em;
   color: rgba(247, 244, 238, 0.82);
   font-size: 16px;
+  margin: 0 0 12px;
+}
+
+.hero-lead[lang="en"] {
+  font-family: var(--en);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.55;
+  color: rgba(201, 180, 138, 0.88);
   margin: 0 0 36px;
+  letter-spacing: 0.02em;
 }
 
 .hero-actions {
@@ -271,13 +360,25 @@ h3 {
 
 .btn {
   display: inline-flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  min-height: 48px;
-  padding: 0 22px;
+  min-height: 52px;
+  padding: 8px 22px;
   font-size: 13px;
   letter-spacing: 0.12em;
   border: 1px solid transparent;
+  line-height: 1.2;
+}
+
+.btn small {
+  font-family: var(--en);
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  opacity: 0.78;
+  margin-top: 3px;
 }
 
 .btn-primary {
@@ -320,6 +421,16 @@ h3 {
   font-size: 18px;
 }
 
+.hero-meta dd small {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--en);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--brass);
+  letter-spacing: 0.02em;
+}
+
 .vert-label {
   position: absolute;
   right: 28px;
@@ -353,13 +464,34 @@ h3 {
   font-size: clamp(28px, 4vw, 44px);
 }
 
+.section-head h2 .en-line {
+  font-size: 22px;
+}
+
 .lede {
   margin: 0;
   color: var(--muted-dark);
 }
 
-.section-dark .lede {
+.lede-en {
+  margin: 8px 0 0;
+  font-family: var(--en);
+  font-style: italic;
+  font-size: 17px;
+  color: #8a5a38;
+}
+
+.section-dark .lede,
+.section .lede-en.dark {
+  color: rgba(201, 180, 138, 0.88);
+}
+
+.section:not(.section-paper) .lede {
   color: rgba(247, 244, 238, 0.7);
+}
+
+.section:not(.section-paper) .lede-en {
+  color: var(--brass);
 }
 
 .issue-list {
@@ -387,6 +519,12 @@ h3 {
   font-size: 17px;
 }
 
+.issue-list .en-line {
+  margin-top: 0.25em;
+  font-size: 17px;
+  color: #8a5a38;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -406,7 +544,25 @@ h3 {
 
 .card h3 {
   font-size: 22px;
-  margin: 10px 0 14px;
+  margin: 10px 0 8px;
+}
+
+.card h3 .en-line {
+  font-size: 16px;
+  margin-top: 0.2em;
+}
+
+.card .en-copy {
+  font-family: var(--en);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+  color: var(--brass);
+}
+
+.section-paper .card .en-copy {
+  color: #8a5a38;
 }
 
 .card p,
@@ -436,7 +592,12 @@ h3 {
   font-family: var(--serif);
   font-size: clamp(22px, 3vw, 32px);
   line-height: 1.6;
-  margin: 0 0 24px;
+  margin: 0 0 8px;
+}
+
+.quote .en-line {
+  font-size: 20px;
+  margin-top: 0.6em;
 }
 
 .sign {
@@ -477,9 +638,14 @@ h3 {
   border: 1px solid var(--line);
 }
 
-.hub {
-  background: var(--bg-2);
-  padding: 36px 32px;
+.hub h3 .en-line {
+  font-size: 16px;
+}
+
+.job p .en-line,
+.job .en-line {
+  font-size: 15px;
+  margin-top: 0.2em;
 }
 
 .page-hero {
@@ -490,6 +656,11 @@ h3 {
 .page-hero h1 {
   font-size: clamp(32px, 5vw, 56px);
   margin-top: 12px;
+  max-width: 14em;
+}
+
+.page-hero h1 .en-line {
+  font-size: clamp(18px, 2.4vw, 26px);
 }
 
 .prose {
@@ -590,7 +761,6 @@ h3 {
 }
 
 @media (max-width: 900px) {
-  .nav,
   .header-cta {
     display: none;
   }
@@ -628,8 +798,13 @@ h3 {
   .hero-meta,
   .footer-grid,
   .issue-list article,
-  .job {
+  .job,
+  .bilingual {
     grid-template-columns: 1fr;
+  }
+
+  .lang-mark {
+    display: none;
   }
 
   .vert-label {

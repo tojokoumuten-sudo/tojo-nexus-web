@@ -18,7 +18,7 @@ function headerHTML() {
   const file = currentFile();
   const solid = file !== "index.html" ? " is-solid" : "";
   return `
-    <a class="skip" href="#main">コンテンツへスキップ</a>
+    <a class="skip" href="#main">Skip / コンテンツへスキップ</a>
     <header class="header${solid}" data-header>
       <div class="header-inner">
         <a class="brand" href="index.html">
@@ -28,14 +28,17 @@ function headerHTML() {
             <span>Construction BIM</span>
           </span>
         </a>
-        <nav class="nav" data-nav aria-label="メイン">
+        <nav class="nav" data-nav aria-label="Main / メイン">
           ${NAV.map(
             (item) =>
               `<a href="${item.href}" class="${file === item.href ? "is-current" : ""}">${item.label}</a>`
           ).join("")}
         </nav>
-        <a class="header-cta" href="contact.html">お問い合わせ</a>
-        <button class="menu-btn" type="button" data-menu aria-label="メニュー">☰</button>
+        <div class="header-actions">
+          <span class="lang-mark" aria-hidden="true">JA · EN</span>
+          <a class="header-cta" href="contact.html">お問い合わせ<small lang="en">Contact</small></a>
+          <button class="menu-btn" type="button" data-menu aria-label="Menu">☰</button>
+        </div>
       </div>
     </header>
   `;
@@ -47,12 +50,12 @@ function footerHTML() {
       <div class="wrap footer-grid">
         <div>
           <h3>Studio</h3>
-          <p>株式会社Tojo nexus</p>
-          <p>〒651-0087 兵庫県神戸市中央区御幸通8丁目1-6<br>神戸国際会館 22F</p>
+          <p>株式会社Tojo nexus<br><span lang="en" style="font-family:var(--en);font-style:italic">Tojo nexus Co., Ltd.</span></p>
+          <p>〒651-0087 兵庫県神戸市中央区御幸通8丁目1-6<br>神戸国際会館 22F<br><span lang="en" style="font-family:var(--en);font-style:italic">22F, Kobe Kokusai Kaikan</span></p>
         </div>
         <div>
           <h3>Hours / Contact</h3>
-          <p>月—金 9:00 — 18:00</p>
+          <p>月—金 9:00 — 18:00<br><span lang="en" style="font-family:var(--en);font-style:italic">Mon–Fri, 9:00–18:00</span></p>
           <p><a href="mailto:tojo-h@tojo-nexus.com">tojo-h@tojo-nexus.com</a></p>
           <p><a href="tel:0785705766">078-570-5766</a></p>
         </div>
