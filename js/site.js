@@ -58,7 +58,8 @@ function footerHTML() {
           <h3>Hours / Contact</h3>
           <p>月—金 9:00 — 18:00<br><span lang="en" style="font-family:var(--en);font-style:italic">Mon–Fri, 9:00–18:00</span></p>
           <p><a href="mailto:tojo-h@tojo-nexus.com">tojo-h@tojo-nexus.com</a></p>
-          <p><a href="tel:0785705766">078-570-5766</a></p>
+          <p class="line-label">LINE</p>
+          <img class="line-qr" src="images/line-qr.png" alt="LINE QR code / 公式LINE">
         </div>
         <div>
           <h3>Hubs</h3>
