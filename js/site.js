@@ -41,7 +41,6 @@ function headerHTML() {
           <button class="menu-btn" type="button" data-menu aria-label="Menu">☰</button>
         </div>
       </div>
-      <p class="header-gold" lang="en">BIM keeps the job site running</p>
     </header>
   `;
 }
