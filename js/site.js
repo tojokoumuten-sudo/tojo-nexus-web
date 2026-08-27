@@ -64,7 +64,7 @@ function footerHTML() {
         <div>
           <h3>Hubs</h3>
           <p>Kobe, Japan</p>
-          <p>Da Nang, Vietnam</p>
+          <p>Da Nang, Vietnam<br>3F, Indochina Riverside Office Tower<br>74 Bạch Đằng, Hải Châu<br>Đà Nẵng 550000</p>
         </div>
       </div>
       <div class="wrap copyright">© ${new Date().getFullYear()} Tojo nexus Co., Ltd.</div>
