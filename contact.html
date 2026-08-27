@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CONTACT | Tojo nexus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="kicker">Contact</p>
+        <h1>状況整理だけでも、<br>構いません。</h1>
+      </div>
+    </header>
+    <section class="section">
+      <div class="wrap split">
+        <div class="prose">
+          <p>BIM業務の相談、見積、採用、パートナーシップ。内容を確認後、原則2営業日以内にご連絡します。業務内容・納期・ボリュームが決まっていれば、そのまま書いてください。</p>
+          <p>E-mail　<a href="mailto:tojo-h@tojo-nexus.com">tojo-h@tojo-nexus.com</a><br>TEL　<a href="tel:0785705766">078-570-5766</a></p>
+        </div>
+        <form class="form" action="https://formsubmit.co/tojo-h@tojo-nexus.com" method="POST">
+          <input type="hidden" name="_subject" value="Tojo nexus サイトからの問い合わせ">
+          <input type="hidden" name="_captcha" value="false">
+          <label>名前<input name="name" required></label>
+          <label>会社名<input name="company"></label>
+          <label>役職<input name="title"></label>
+          <label>メール<input type="email" name="email" required></label>
+          <label>種別
+            <select name="type" required>
+              <option value="">選択してください</option>
+              <option>サービスについて</option>
+              <option>お見積り依頼</option>
+              <option>採用について</option>
+              <option>パートナーシップ</option>
+              <option>その他</option>
+            </select>
+          </label>
+          <label>メッセージ<textarea name="message" required></textarea></label>
+          <button class="btn btn-primary" type="submit">送信する</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="js/site.js"></script>
+</body>
+</html>
