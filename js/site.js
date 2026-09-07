@@ -8,7 +8,7 @@ const NAV = [
 ];
 
 const LOGO =
-  "https://hirorin0706-evxfa.wordpress.com/wp-content/uploads/2026/01/cc8cb5a5-8102-4845-9734-566bd3517bea-2.png";
+  "images/logo.png";
 
 function currentFile() {
   const name = location.pathname.split("/").pop();
@@ -29,7 +29,7 @@ function headerHTML() {
             <span>Construction BIM</span>
           </span>
         </a>
-        <nav class="nav" data-nav aria-label="Main / メイン">
+        <nav class="nav" id="main-navigation" data-nav aria-label="Main / メイン">
           ${NAV.map(
             (item) =>
               `<a href="${item.href}" class="${file === item.href ? "is-current" : ""}">${item.label}</a>`
@@ -38,7 +38,7 @@ function headerHTML() {
         <div class="header-actions">
           <span class="lang-mark" aria-hidden="true">JA · EN</span>
           <a class="header-cta" href="contact.html">お問い合わせ<small lang="en">Contact</small></a>
-          <button class="menu-btn" type="button" data-menu aria-label="Menu">☰</button>
+          <button class="menu-btn" type="button" data-menu aria-label="メニューを開く" aria-expanded="false" aria-controls="main-navigation">☰</button>
         </div>
       </div>
     </header>
@@ -83,6 +83,8 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("is-scrolled", window.scrollY > 12);
 });
 
-menu?.addEventListener("click", () => {
-  nav.classList.toggle("is-open");
-});
+function closeMenu() { nav.classList.remove("is-open"); menu.setAttribute("aria-expanded", "false"); menu.setAttribute("aria-label", "メニューを開く"); }
+menu?.addEventListener("click", () => { const opened = nav.classList.toggle("is-open"); menu.setAttribute("aria-expanded", String(opened)); menu.setAttribute("aria-label", opened ? "メニューを閉じる" : "メニューを開く"); });
+document.addEventListener("keydown", (event) => { if (event.key === "Escape" && nav.classList.contains("is-open")) { closeMenu(); menu.focus(); } });
+nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+matchMedia("(min-width: 901px)").addEventListener("change", (event) => { if (event.matches) closeMenu(); });

@@ -1,0 +1,160 @@
+/* Atmospheric architecture behind the original brand typography. */
+.home-refined .hero-ambient {
+  isolation: isolate;
+  min-height: min(940px, 100svh);
+  padding: calc(var(--header-h) + 54px) 0 30px;
+  background: #090d10;
+}
+.architecture-background,.hero-atmosphere { position:absolute; inset:0; pointer-events:none; }
+.architecture-background { z-index:-3; overflow:hidden; }
+.architecture-slide {
+  position:absolute; inset:0; opacity:0;
+  perspective:1350px; perspective-origin:54% 46%;
+  --orbit-direction:1; --image-opacity:.32;
+  --image-tone:saturate(.5) brightness(.92);
+}
+.architecture-slide:first-child { opacity:1; }
+.architecture-orbit { position:absolute;inset:0;transform-origin:54% 50%; }
+.architecture-slide img {
+  position:absolute; width:106%; height:114%; max-width:none; left:-3%; top:-6%;
+  object-fit:cover; object-position:60% center; opacity:var(--image-opacity);
+  filter:var(--image-tone) blur(3px);
+}
+.architecture-slide--museum { --image-opacity:.35; }
+.architecture-slide--museum img { object-position:60% 60%; }
+.architecture-slide--opera { --image-opacity:.33; }
+.architecture-slide--gallery { --image-opacity:.32; }
+.architecture-slide--residence { --image-opacity:.32; }
+.architecture-slide--heritage {
+  --image-opacity:.26;
+  --image-tone:invert(1) sepia(.28) saturate(.55) brightness(.95);
+}
+.architecture-slide--heritage img {
+  object-fit:contain; object-position:62% 50%; width:100%; height:136%; top:-18%;left:0;
+  mix-blend-mode:screen;
+}
+.hero-atmosphere { position:absolute; inset:0; pointer-events:none; }
+.architecture-background { z-index:-3; overflow:hidden; }
+.architecture-slide { position:absolute; inset:0; opacity:0; }
+.architecture-slide:first-child { opacity:1; }
+.architecture-slide img {
+  position:absolute; width:104%; height:110%; max-width:none; left:-2%; top:-4%;
+  object-fit:cover; object-position:60% center; opacity:.28;
+  filter:blur(3px) saturate(.48) brightness(.85);
+  transform:translate3d(0,0,0) scale(1.05);
+}
+.architecture-slide--museum img { object-position:60% 60%; opacity:.3; }
+.architecture-slide--heritage img {
+  object-fit:contain; object-position:62% 50%; width:100%; height:140%; top:-20%;left:0;
+  opacity:.27; filter:invert(1) sepia(.28) saturate(.55) blur(3.6px) brightness(.95);
+  mix-blend-mode:screen;
+}
+.hero-atmosphere {
+  z-index:-2;
+  background:linear-gradient(90deg,rgba(8,11,14,.62) 0%,rgba(8,11,14,.25) 44%,rgba(8,11,14,.12) 100%),linear-gradient(180deg,rgba(8,11,14,.2),transparent 35%,rgba(8,11,14,.2) 78%,#0b0d10 100%);
+}
+.home-refined .hero-ambient .hero-grid { z-index:-1; opacity:.28; mask-image:linear-gradient(90deg,#000,transparent 96%); }
+.home-refined .hero-ambient .hero-inner { z-index:1; }
+.home-refined .hero-ambient .gold-title { margin:0 0 45px; }
+.hero-ambient .hero-copy { max-width:970px; }
+.home-refined .hero-ambient h1 {
+  font-size:clamp(38px,5.35vw,72px);line-height:1.42;letter-spacing:.025em;
+  margin:22px 0 30px;text-shadow:0 3px 32px rgba(0,0,0,.24);
+}
+.home-refined .hero-ambient h1 .en-line { font-size:clamp(21px,2vw,27px);max-width:32em; }
+.home-refined .hero-ambient .hero-lead { max-width:40em; }
+.home-refined .hero-ambient .hero-lead[lang="en"] { margin-bottom:30px; }
+.hero-ambient-note { display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:46px;color:#939b9c;font-size:.75rem; }
+.hero-ambient-note [lang="en"] { font-family:var(--en);font-size:.875rem;font-style:italic; }
+.motion-toggle {
+  background:transparent;border:0;border-bottom:1px solid rgba(201,180,138,.3);border-radius:0;
+  color:#b5b5ac;font:inherit;font-size:.875rem;line-height:1.6;letter-spacing:.05em;padding:9px 0;cursor:pointer;
+}
+.motion-toggle:hover { color:var(--white);border-bottom-color:var(--brass); }
+.motion-toggle[hidden] { display:none; }
+.home-refined .hero-ambient .hero-meta { margin-top:16px; }
+/* Six images, 18 seconds apart. Each emerges from depth, turns, and recedes. */
+.ambient-ready .architecture-slide {
+  animation:architecture-dissolve 108s linear infinite both;
+  animation-delay:var(--stage-delay);
+}
+.ambient-ready .architecture-orbit {
+  animation:architecture-orbit 108s linear infinite both;
+  animation-delay:var(--stage-delay);
+}
+.ambient-ready .architecture-slide img {
+  animation:architecture-focus 108s linear infinite both;
+  animation-delay:var(--stage-delay);
+}
+@keyframes architecture-dissolve {
+  0% {opacity:0}
+  4.8% {opacity:1}
+  12% {opacity:1}
+  21% {opacity:0}
+  100% {opacity:0}
+}
+@keyframes architecture-orbit {
+  0% {
+    transform:translate3d(calc(-5% * var(--orbit-direction)),4%,-540px) rotateY(calc(-25deg * var(--orbit-direction))) rotateX(7deg) scale(.96);
+    animation-timing-function:cubic-bezier(.2,.55,.4,1);
+  }
+  4.8% {
+    transform:translate3d(calc(-1.8% * var(--orbit-direction)),1.2%,-70px) rotateY(calc(-12deg * var(--orbit-direction))) rotateX(3.5deg) scale(1.01);
+    animation-timing-function:linear;
+  }
+  12% {
+    transform:translate3d(calc(1.7% * var(--orbit-direction)),-1.2%,110px) rotateY(calc(7deg * var(--orbit-direction))) rotateX(-1.5deg) scale(1.04);
+    animation-timing-function:cubic-bezier(.55,0,.8,.45);
+  }
+  21%,100% {
+    transform:translate3d(calc(6% * var(--orbit-direction)),-3.5%,-560px) rotateY(calc(30deg * var(--orbit-direction))) rotateX(-7deg) scale(.94);
+  }
+}
+@keyframes architecture-focus {
+  0% {filter:var(--image-tone) blur(14px);opacity:calc(var(--image-opacity) * .65)}
+  4.8% {filter:var(--image-tone) blur(4.5px);opacity:var(--image-opacity)}
+  12% {filter:var(--image-tone) blur(2.7px);opacity:var(--image-opacity)}
+  21%,100% {filter:var(--image-tone) blur(17px);opacity:calc(var(--image-opacity) * .55)}
+}
+:is(.ambient-paused,.ambient-offscreen,.ambient-document-hidden) .architecture-slide,
+:is(.ambient-paused,.ambient-offscreen,.ambient-document-hidden) .architecture-orbit,
+:is(.ambient-paused,.ambient-offscreen,.ambient-document-hidden) .architecture-slide img {animation-play-state:paused}
+/* Content remains visible without JavaScript, or with reduced motion. */
+.reveal-pending { opacity:0; transform:translate3d(0,28px,0); filter:blur(5px); }
+.reveal-target { transition:opacity 1.05s ease,transform 1.15s cubic-bezier(.2,.7,.2,1),filter 1.1s ease; transition-delay:var(--reveal-delay,0ms); }
+.reveal-target.is-revealed { opacity:1; transform:none;filter:none; }
+@media(max-width:900px) {
+  .home-refined .hero-ambient { padding-top:calc(var(--header-h) + 38px);min-height:auto; }
+  .home-refined .hero-ambient h1 { font-size:clamp(34px,5.65vw,52px); }
+  .architecture-slide {perspective:1550px;--image-opacity:.28}
+  .architecture-slide img {width:130%;left:-16%;object-position:60% center}
+  .architecture-slide--heritage {--image-opacity:.23}
+  .architecture-slide--heritage img {width:130%;height:110%;top:-4%}
+  .hero-atmosphere { background:linear-gradient(90deg,rgba(8,11,14,.52),rgba(8,11,14,.22)),linear-gradient(180deg,rgba(8,11,14,.15),transparent 45%,#0b0d10 100%); }
+}
+@media(max-width:560px) {
+  .home-refined .hero-ambient {padding-top:calc(var(--header-h) + 24px)}
+  .home-refined .hero-ambient .gold-title {margin-bottom:30px}
+  .home-refined .hero-ambient h1 {font-size:clamp(24px,6.7vw,38px);line-height:1.5}
+  .home-refined .hero-ambient h1 .en-line {font-size:1.25rem}
+  .hero-ambient-note {margin-top:30px;gap:8px}
+  .architecture-slide img {width:170%;left:-34%;height:100%;top:0;object-position:56% center}
+  .architecture-slide--heritage img {width:145%;left:-20%;height:110%;top:0}
+}
+@media(prefers-reduced-motion:reduce) {
+  .ambient-ready .architecture-slide,.ambient-ready .architecture-orbit,.ambient-ready .architecture-slide img {animation:none!important}
+  .ambient-ready .architecture-slide {opacity:0!important}
+  .ambient-ready .architecture-slide:first-child {opacity:1!important}
+  .architecture-orbit,.architecture-slide img {transform:none!important}
+  .motion-toggle {display:none!important}
+  .reveal-target,.reveal-pending {opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+}
+@media (prefers-reduced-motion:no-preference) {
+  .ambient-ready .hero-copy > * {animation:hero-copy-arrive 1.5s cubic-bezier(.2,.7,.2,1) both}
+  .ambient-ready .hero-copy > :nth-child(2) {animation-delay:.08s}
+  .ambient-ready .hero-copy > :nth-child(3) {animation-delay:.2s}
+  .ambient-ready .hero-copy > :nth-child(4) {animation-delay:.27s}
+  .ambient-ready .hero-copy > :nth-child(5) {animation-delay:.34s}
+}
+@keyframes hero-copy-arrive {from{opacity:0;transform:translate3d(0,14px,0);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+@media print {.architecture-background,.motion-toggle{display:none!important}.reveal-pending{opacity:1!important;transform:none!important;filter:none!important}}

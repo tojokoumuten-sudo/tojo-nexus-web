@@ -7,7 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/site.css?v=20260907-1">
+  <link rel="stylesheet" href="css/refinement.css?v=20260907-1">
+<link rel="stylesheet" href="css/motion.css?v=20260907-1">
 </head>
 <body>
   <main id="main">
@@ -20,8 +22,8 @@
     <section class="section">
       <div class="wrap split">
         <div class="prose">
-          <p>BIM業務の相談、見積、採用、パートナーシップ。内容を確認後、原則2営業日以内にご連絡します。業務内容・納期・ボリュームが決まっていれば、そのまま書いてください。</p>
-          <p class="lede-en" lang="en" style="margin-bottom:1.2em">Consultation, estimates, careers, partnership. We reply within two business days. If scope, programme, and volume are already known, write them as they are.</p>
+          <p>「今、現場で何に時間がかかっているか」からお聞かせください。WEB会議で現場の状況を伺い、必要な情報や資料、支援できる範囲をご説明します。BIMの相談、見積、採用、パートナーシップもこちらから。内容を確認後、原則2営業日以内にご連絡します。</p>
+          <p class="lede-en" lang="en" style="margin-bottom:1.2em">Tell us what is taking time on site. In a web meeting, we will help define the information and support you need. We also welcome inquiries about estimates, careers, and partnerships, and normally respond within two business days.</p>
           <p>E-mail　<a href="mailto:tojo-h@tojo-nexus.com">tojo-h@tojo-nexus.com</a></p>
           <p class="line-label">LINE</p>
           <img class="line-qr" src="images/line-qr.png" alt="LINE QR code / 公式LINE">
@@ -29,10 +31,10 @@
         <form class="form" action="https://formsubmit.co/tojo-h@tojo-nexus.com" method="POST">
           <input type="hidden" name="_subject" value="Tojo nexus サイトからの問い合わせ">
           <input type="hidden" name="_captcha" value="false">
-          <label><span class="lbl">名前<i lang="en">Name</i></span><input name="name" required></label>
-          <label><span class="lbl">会社名<i lang="en">Company</i></span><input name="company"></label>
+          <label><span class="lbl">名前<i lang="en">Name</i></span><input name="name" autocomplete="name" required></label>
+          <label><span class="lbl">会社名<i lang="en">Company</i></span><input name="company" autocomplete="organization"></label>
           <label><span class="lbl">役職<i lang="en">Title</i></span><input name="title"></label>
-          <label><span class="lbl">メール<i lang="en">Email</i></span><input type="email" name="email" required></label>
+          <label><span class="lbl">メール<i lang="en">Email</i></span><input type="email" name="email" autocomplete="email" required></label>
           <label><span class="lbl">種別<i lang="en">Type</i></span>
             <select name="type" required>
               <option value="">選択してください / Please select</option>
@@ -49,6 +51,7 @@
       </div>
     </section>
   </main>
-  <script src="js/site.js"></script>
+  <script src="js/site.js?v=20260907-1"></script>
+<script src="js/motion.js?v=20260907-1"></script>
 </body>
 </html>
