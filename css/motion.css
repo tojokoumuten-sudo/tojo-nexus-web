@@ -14,13 +14,17 @@
   perspective:1350px; perspective-origin:50% 50%;
   --image-opacity:.56;
   --image-tone:saturate(.78) brightness(1.08);
+  --image-blur:4px;
+  --image-blur-far:8px;
+  --orbit-animation:architecture-orbit;
+  --turn-direction:1;
 }
 .architecture-slide:first-child { opacity:1; }
 .architecture-orbit { position:absolute;inset:6% 8%;transform-origin:50% 50%; }
 .architecture-slide img {
   position:absolute; width:100%; height:100%; max-width:none; left:0; top:0;
   object-fit:contain; object-position:center; opacity:var(--image-opacity);
-  filter:var(--image-tone);
+  filter:var(--image-tone) blur(var(--image-blur));
 }
 .architecture-slide--museum { --image-opacity:.62; }
 .architecture-slide--tower { --image-opacity:.64; }
@@ -55,13 +59,13 @@
 .motion-toggle:hover { color:var(--white);border-bottom-color:var(--brass); }
 .motion-toggle[hidden] { display:none; }
 .home-refined .hero-ambient .hero-meta { margin-top:16px; }
-/* Six-second changes, brief dissolves, and a clear, continuous forward turn. */
+/* Brief dissolves keep a softly focused building visible throughout each turn. */
 .ambient-ready .architecture-slide {
   animation:architecture-dissolve var(--architecture-cycle) linear infinite both;
   animation-delay:calc(var(--stage-index) * var(--architecture-step) - 1.2s);
 }
 .ambient-ready .architecture-orbit {
-  animation:architecture-orbit var(--architecture-cycle) linear infinite both;
+  animation:var(--orbit-animation) var(--architecture-cycle) linear infinite both;
   animation-delay:calc(var(--stage-index) * var(--architecture-step) - 1.2s);
 }
 .ambient-ready .architecture-slide img {
@@ -91,9 +95,32 @@
   }
 }
 @keyframes architecture-focus {
-  0% {filter:var(--image-tone) blur(4px)}
-  2.5%,16.6667% {filter:var(--image-tone) blur(0px)}
-  20%,100% {filter:var(--image-tone) blur(4px)}
+  0% {filter:var(--image-tone) blur(var(--image-blur-far))}
+  2.5%,16.6667% {filter:var(--image-tone) blur(calc(var(--image-blur) + 1px))}
+  8.3333% {filter:var(--image-tone) blur(var(--image-blur))}
+  20%,100% {filter:var(--image-tone) blur(var(--image-blur-far))}
+}
+/* Mobile paths bank and travel around the centre; paired directions vary all six views. */
+@keyframes architecture-arc {
+  0% {transform:translate3d(calc(var(--turn-direction) * -5%),4%,-220px) rotateY(calc(var(--turn-direction) * -64deg)) rotateX(12deg) rotateZ(calc(var(--turn-direction) * -14deg)) scale(.82)}
+  2.5% {transform:translate3d(calc(var(--turn-direction) * -4%),-3%,-90px) rotateY(calc(var(--turn-direction) * -44deg)) rotateX(8deg) rotateZ(calc(var(--turn-direction) * -8deg)) scale(.94)}
+  8.3333% {transform:translate3d(0,-3%,0) rotateY(calc(var(--turn-direction) * -6deg)) rotateX(2deg) rotateZ(calc(var(--turn-direction) * 3deg)) scale(.98)}
+  16.6667% {transform:translate3d(calc(var(--turn-direction) * 4%),2%,-90px) rotateY(calc(var(--turn-direction) * 40deg)) rotateX(-10deg) rotateZ(calc(var(--turn-direction) * 12deg)) scale(.94)}
+  20%,100% {transform:translate3d(calc(var(--turn-direction) * 6%),4%,-240px) rotateY(calc(var(--turn-direction) * 66deg)) rotateX(-16deg) rotateZ(calc(var(--turn-direction) * 18deg)) scale(.82)}
+}
+@keyframes architecture-spiral {
+  0% {transform:translate3d(calc(var(--turn-direction) * 6%),-6%,-220px) rotateY(calc(var(--turn-direction) * 64deg)) rotateX(-16deg) rotateZ(calc(var(--turn-direction) * 14deg)) scale(.82)}
+  2.5% {transform:translate3d(calc(var(--turn-direction) * 4%),-4%,-90px) rotateY(calc(var(--turn-direction) * 44deg)) rotateX(-8deg) rotateZ(calc(var(--turn-direction) * 8deg)) scale(.94)}
+  8.3333% {transform:translate3d(calc(var(--turn-direction) * -2%),1%,0) rotateY(calc(var(--turn-direction) * -4deg)) rotateX(6deg) rotateZ(calc(var(--turn-direction) * -3deg)) scale(.98)}
+  16.6667% {transform:translate3d(calc(var(--turn-direction) * -3%),5%,-100px) rotateY(calc(var(--turn-direction) * -40deg)) rotateX(14deg) rotateZ(calc(var(--turn-direction) * -12deg)) scale(.94)}
+  20%,100% {transform:translate3d(calc(var(--turn-direction) * -5%),6%,-240px) rotateY(calc(var(--turn-direction) * -66deg)) rotateX(20deg) rotateZ(calc(var(--turn-direction) * -18deg)) scale(.82)}
+}
+@keyframes architecture-bank {
+  0% {transform:translate3d(calc(var(--turn-direction) * 4%),3%,-240px) rotateY(calc(var(--turn-direction) * -62deg)) rotateX(-16deg) rotateZ(calc(var(--turn-direction) * -18deg)) scale(.82)}
+  2.5% {transform:translate3d(calc(var(--turn-direction) * -3%),4%,-100px) rotateY(calc(var(--turn-direction) * -40deg)) rotateX(-8deg) rotateZ(calc(var(--turn-direction) * -11deg)) scale(.94)}
+  8.3333% {transform:translate3d(calc(var(--turn-direction) * -3%),-2%,-20px) rotateY(calc(var(--turn-direction) * -6deg)) rotateX(7deg) rotateZ(calc(var(--turn-direction) * 1deg)) scale(.98)}
+  16.6667% {transform:translate3d(calc(var(--turn-direction) * 3%),-4%,-90px) rotateY(calc(var(--turn-direction) * 40deg)) rotateX(13deg) rotateZ(calc(var(--turn-direction) * 13deg)) scale(.94)}
+  20%,100% {transform:translate3d(calc(var(--turn-direction) * 5%),2%,-240px) rotateY(calc(var(--turn-direction) * 66deg)) rotateX(18deg) rotateZ(calc(var(--turn-direction) * 20deg)) scale(.82)}
 }
 :is(.ambient-paused,.ambient-offscreen,.ambient-document-hidden) .architecture-slide,
 :is(.ambient-paused,.ambient-offscreen,.ambient-document-hidden) .architecture-orbit,
@@ -103,12 +130,16 @@
 .reveal-target { transition:opacity 1.05s ease,transform 1.15s cubic-bezier(.2,.7,.2,1),filter 1.1s ease; transition-delay:var(--reveal-delay,0ms); }
 .reveal-target.is-revealed { opacity:1; transform:none;filter:none; }
 @media(max-width:900px) {
-  .home-refined .hero-ambient { padding-top:calc(var(--header-h) + 38px);min-height:auto; }
+  .home-refined .hero-ambient { --architecture-cycle:30s;--architecture-step:5s;padding-top:calc(var(--header-h) + 38px);min-height:auto; }
   .home-refined .hero-ambient h1 { font-size:clamp(34px,5.65vw,52px); }
   .architecture-background {inset:calc(var(--header-h) + 112px) 0 auto;height:clamp(310px,88vw,430px)}
-  .architecture-slide {perspective:1050px;--image-opacity:.72}
-  .architecture-orbit {inset:7% 6%}
-  .architecture-slide--heritage {--image-opacity:.55}
+  .architecture-slide {perspective:1050px;--image-opacity:.66;--image-tone:saturate(.65) brightness(1.04);--image-blur:3.5px;--orbit-animation:architecture-arc}
+  .architecture-orbit {inset:16% 8%}
+  .architecture-slide--tower {--orbit-animation:architecture-spiral;--turn-direction:-1}
+  .architecture-slide--opera {--orbit-animation:architecture-bank;--turn-direction:-1}
+  .architecture-slide--heritage {--image-opacity:.52;--image-tone:invert(1) sepia(.28) saturate(.55) brightness(.95);--orbit-animation:architecture-spiral}
+  .architecture-slide--gallery {--orbit-animation:architecture-bank}
+  .architecture-slide--residence {--turn-direction:-1}
   .hero-atmosphere {background:linear-gradient(90deg,rgba(8,11,14,.15),rgba(8,11,14,.04)),linear-gradient(180deg,rgba(8,11,14,.1),transparent 28%,rgba(8,11,14,.12) 48%,#0b0d10 75%)}
 }
 @media(max-width:560px) {
@@ -118,10 +149,11 @@
   .home-refined .hero-ambient h1 .en-line {font-size:1.25rem}
   .hero-ambient-note {margin-top:30px;gap:8px}
   .architecture-background {top:calc(var(--header-h) + 110px);height:clamp(280px,94vw,390px)}
+  .architecture-orbit {inset:7% 8%}
 }
 @media(max-width:900px) and (orientation:landscape) {
   .architecture-background {top:calc(var(--header-h) + 32px);height:min(350px,calc(100svh - var(--header-h) - 48px))}
-  .architecture-orbit {inset:12% 8%}
+  .architecture-orbit {inset:20% 8%}
 }
 @media(prefers-reduced-motion:reduce) {
   .ambient-ready .architecture-slide,.ambient-ready .architecture-orbit,.ambient-ready .architecture-slide img {animation:none!important}
