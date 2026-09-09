@@ -23,7 +23,7 @@ function headerHTML() {
     <header class="header${solid}" data-header>
       <div class="header-inner">
         <a class="brand" href="index.html">
-          <img src="${LOGO}" alt="Tojo nexus">
+          <img src="${LOGO}" alt="Tojo nexus" width="944" height="1088">
           <span class="brand-text">
             <strong>Tojo nexus</strong>
             <span>Construction BIM</span>
@@ -32,7 +32,7 @@ function headerHTML() {
         <nav class="nav" id="main-navigation" data-nav aria-label="Main / メイン">
           ${NAV.map(
             (item) =>
-              `<a href="${item.href}" class="${file === item.href ? "is-current" : ""}">${item.label}</a>`
+              `<a href="${item.href}" class="${file === item.href ? "is-current" : ""}"${file === item.href ? ' aria-current="page"' : ''}>${item.label}</a>`
           ).join("")}
         </nav>
         <div class="header-actions">
@@ -59,7 +59,7 @@ function footerHTML() {
           <p>月—金 9:00 — 18:00<br><span lang="en" style="font-family:var(--en);font-style:italic">Mon–Fri, 9:00–18:00</span></p>
           <p><a href="mailto:tojo-h@tojo-nexus.com">tojo-h@tojo-nexus.com</a></p>
           <p class="line-label">LINE</p>
-          <img class="line-qr" src="images/line-qr.png" alt="LINE QR code / 公式LINE">
+          <img class="line-qr" src="images/line-qr.png" alt="LINE QR code / 公式LINE" width="317" height="317" loading="lazy">
         </div>
         <div>
           <h3>Hubs</h3>
@@ -67,13 +67,23 @@ function footerHTML() {
           <p>Da Nang, Vietnam<br>3F, Indochina Riverside Office Tower<br>74 Bạch Đằng, Hải Châu<br>Đà Nẵng 550000</p>
         </div>
       </div>
+      <nav class="wrap footer-links" aria-label="ページと施工BIMの活用ガイド">
+        <a href="service.html">施工BIMの外注・制作支援</a>
+        <a href="bim.html">施工BIMとは</a>
+        <a href="bim-clash-detection.html">干渉チェックの進め方</a>
+        <a href="bim-meeting-documents.html">打ち合わせ資料のつくり方</a>
+        <a href="company.html">会社概要</a>
+        <a href="contact.html">相談・見積依頼</a>
+      </nav>
       <div class="wrap copyright">© ${new Date().getFullYear()} Tojo nexus Co., Ltd.</div>
     </footer>
   `;
 }
 
-document.body.insertAdjacentHTML("afterbegin", headerHTML());
-document.body.insertAdjacentHTML("beforeend", footerHTML());
+/* Runtime navigation */
+// Published HTML already contains the shared layout. Keep a fallback for older pages.
+if (!document.querySelector("[data-header]")) document.body.insertAdjacentHTML("afterbegin", headerHTML());
+if (!document.querySelector(".footer")) document.body.insertAdjacentHTML("beforeend", footerHTML());
 
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
