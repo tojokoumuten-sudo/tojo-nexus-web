@@ -36,7 +36,6 @@ function headerHTML() {
           ).join("")}
         </nav>
         <div class="header-actions">
-          <span class="lang-mark" aria-hidden="true">JA · EN</span>
           <a class="header-cta" href="contact.html">お問い合わせ<small lang="en">Contact</small></a>
           <button class="menu-btn" type="button" data-menu aria-label="メニューを開く" aria-expanded="false" aria-controls="main-navigation">☰</button>
         </div>
