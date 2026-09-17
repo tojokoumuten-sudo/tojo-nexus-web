@@ -67,8 +67,33 @@
 .service-page .service-lasting h3 { font-size: clamp(24px,2.4vw,30px); line-height: 1.8; }
 .service-page .service-lasting p:first-child { margin-top: 0; }
 .service-page .service-lasting .service-text-link { margin-top: 24px; }
-.service-page .service-permit-readiness { margin-top: 36px; padding: 32px; border: 1px solid var(--line); background: rgba(255,255,255,.018); }
-.service-page .service-permit-readiness h3 { color: var(--brass); font-size: 24px; }
+.service-page .service-permit-guide { margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 24px); }
+.service-page .service-permit-intro { max-width: 60em; margin-bottom: 32px; }
+.service-page .service-permit-intro h3 { font-size: clamp(26px,3vw,36px); line-height: 1.7; }
+.service-page .service-permit-intro > p:last-child { font-size: 16px; line-height: 2; margin: 20px 0 0; }
+.service-page .service-permit-stages { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; padding: 0; margin: 0; list-style: none; }
+.service-page .service-permit-stages > li { display: flex; flex-direction: column; min-width: 0; padding: 28px 24px; border: 1px solid var(--line); background: rgba(255,255,255,.018); }
+.service-page .service-permit-stages > .service-permit-current { border-color: var(--brass); }
+.service-page .service-permit-date { margin: 0 0 24px; color: var(--brass); font-size: 17px; line-height: 1.7; }
+.service-page .service-permit-date > span { display: block; font-size: 12px; margin-top: 4px; }
+.service-page .service-permit-stages h4 { font-family: var(--serif); font-weight: 600; font-size: 24px; letter-spacing: .04em; line-height: 1.7; margin: 0 0 20px; min-height: 3.4em; color: var(--white); }
+.service-page .service-permit-diagram { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 16px 0; border-block: 1px solid var(--line); font-size: 13px; line-height: 1.8; }
+.service-page .service-permit-diagram > span[aria-hidden] { color: var(--brass); }
+.service-page .service-permit-stages .service-permit-target { font-size: 13px; color: var(--brass); line-height: 1.9; margin: 18px 0 0; }
+.service-page .service-permit-stages > li > p:not(.service-permit-date):not(.service-permit-target) { font-size: 15px; line-height: 2; margin: 14px 0 24px; }
+.service-page .service-permit-example { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); }
+.service-page .service-permit-example strong { display: block; font-size: 14px; font-weight: 500; color: var(--white); line-height: 1.9; }
+.service-page .service-permit-example p { font-size: 14px; line-height: 1.95; margin: 10px 0 0; }
+.service-page .service-permit-next { display: flex; gap: 20px; align-items: flex-start; padding: 24px 28px; margin-top: 20px; background: rgba(201,180,138,.07); }
+.service-page .service-permit-next > span { color: var(--brass); font-size: 24px; }
+.service-page .service-permit-next p { font-size: 15px; line-height: 2; margin: 0; }
+.service-page .service-permit-next strong { color: var(--brass); font-weight: 500; }
+.service-page .service-permit-context { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 48px; margin-top: 36px; }
+.service-page .service-permit-context h4 { font-family: var(--serif); color: var(--brass); font-size: 23px; font-weight: 500; line-height: 1.8; margin: 0; }
+.service-page .service-permit-context p { font-size: 15px; line-height: 2; margin: 16px 0 0; }
+.service-page .service-permit-context a { margin-top: 24px; }
+.service-page .service-permit-sources { margin: 32px 0 0; padding-top: 20px; border-top: 1px solid var(--line); font-size: 12px; line-height: 2; }
+.service-page .service-permit-sources a { text-decoration: underline; text-underline-offset: 3px; }
 .service-page .service-policy { margin-top: 44px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 20px 0; font-size: 14px; line-height: 2; }
 .service-page .service-policy summary { cursor: pointer; color: var(--brass); }
 .service-page .service-policy summary span { margin-left: 12px; font-size: 12px; }
@@ -84,6 +109,9 @@
   .service-page .service-audience { padding: 28px 24px; }
   .service-page .service-vision-story, .service-page .service-lasting { gap: 32px; }
   .service-page .service-flow li { padding-inline: 18px; }
+  .service-page .service-permit-stages { gap: 14px; }
+  .service-page .service-permit-stages > li { padding: 24px 18px; }
+  .service-page .service-permit-stages h4 { font-size: 22px; }
 }
 @media (max-width: 900px) {
   .service-page .service-closing { flex-direction: column; align-items: stretch; }
@@ -101,7 +129,12 @@
   .service-page .service-closing { flex-direction: column; align-items: stretch; margin-top: 48px; padding-top: 36px; }
   .service-page .service-desktop-break { display: none; }
   .service-page .service-policy summary span { display: block; margin-left: 0; }
-  .service-page .service-permit-readiness { padding: 26px 22px; }
+  .service-page .service-permit-stages, .service-page .service-permit-context { grid-template-columns: 1fr; }
+  .service-page .service-permit-stages { gap: 20px; }
+  .service-page .service-permit-stages > li { padding: 26px 22px; }
+  .service-page .service-permit-stages h4 { min-height: 0; }
+  .service-page .service-permit-next { padding: 22px; gap: 14px; }
+  .service-page .service-permit-context { gap: 32px; }
 }
 </style>
 </head>
@@ -179,10 +212,46 @@
           </article>
         </div>
         <p class="detail-note service-scope">対応する部位、モデルの詳しさ、納品形式、更新範囲・支援期間は、案件ごとに決定します。設計内容は設計者、施工上の確認事項は施工者と共有しながら進めます。数量はモデルと入力情報に基づき、算出条件と合わせてお渡しします。</p>
-        <aside class="service-lasting service-permit-readiness" aria-labelledby="permit-readiness-heading">
-          <h3 id="permit-readiness-heading">確認申請のBIM対応を、<br>設計事務所の次の強みに。</h3>
-          <div><p>2026年4月にBIM図面審査が始まり、2029年春にはBIMデータ審査の開始が予定されています。確認申請にもBIMを活用する流れを見据え、今の案件から、図面とモデル情報を整える実務を積み重ねていく。その準備をTojo nexusが支えます。</p><p>申請用の図面・BIMデータづくりから、施工段階の整合確認へ。設計の情報を次の工程でも生かせるように、必要な支援からご一緒します。</p><a class="service-text-link" href="https://www.icba.or.jp/bim/">BIM図面審査・BIMデータ審査の制度と予定を見る <span aria-hidden="true">→</span></a></div>
-        </aside>
+        <section class="service-permit-guide" id="bim-permit-roadmap" aria-labelledby="permit-readiness-heading">
+          <!-- CODEX / 2026-09-17: 審査対象の変化・具体例・公共分野の原則適用を区別して説明。 -->
+          <header class="service-permit-intro">
+            <p class="kicker">BIM &amp; Building confirmation</p>
+            <h3 id="permit-readiness-heading">図面を読む審査から、<br>建物の情報を使う審査へ。</h3>
+            <p>建築確認は、着工前に計画が建築関係の法令に適合するかを確かめる手続きです。<br class="service-desktop-break">BIMの導入によって、審査に使う情報と、確認の進め方が段階的に変わっていきます。</p>
+          </header>
+          <ol class="service-permit-stages" aria-label="確認申請におけるBIM活用の3段階">
+            <li>
+              <p class="service-permit-date">従来の方法<span>現在も利用できます</span></p>
+              <h4>図面どうしを<br>読み比べる。</h4>
+              <div class="service-permit-diagram" aria-label="平面図と立面図などを照合"><span>平面図</span><span aria-hidden="true">↔</span><span>立面図など</span></div>
+              <p class="service-permit-target">審査の中心：図面</p>
+              <p>平面図・立面図・断面図などを読み、図面同士の食い違いがないか、法令の基準に適合するかを確認します。</p>
+              <div class="service-permit-example"><strong>例えば、窓の確認</strong><p>同じ窓の位置や寸法が、平面図と立面図で一致しているかを照合します。</p></div>
+            </li>
+            <li class="service-permit-current">
+              <p class="service-permit-date">2026年4月 開始<span>現在利用できる制度</span></p>
+              <h4>BIM図面審査</h4>
+              <div class="service-permit-diagram" aria-label="BIMモデルからPDF図面を作成"><span>BIMモデル</span><span aria-hidden="true">→</span><span>PDF図面</span></div>
+              <p class="service-permit-target">審査対象：BIMから作ったPDF図面など</p>
+              <p>一つのBIMモデルから図面を作成。定められた基準と設計者の誓約に基づき、図面間の整合確認を一部省略できます。3Dモデルは、建物の形を理解するための参考に使います。</p>
+              <div class="service-permit-example"><strong>例えば、窓の確認</strong><p>同じモデルから表した窓の位置は、図面間でそろいます。条件を満たす項目では、照合の繰り返しを減らせます。法令への適合は引き続き審査します。</p></div>
+            </li>
+            <li>
+              <p class="service-permit-date">2029年春 開始予定<span>制度・審査機能を整備中</span></p>
+              <h4>BIMデータ審査</h4>
+              <div class="service-permit-diagram" aria-label="BIMの形状と属性データを審査にも活用"><span>形状・属性</span><span aria-hidden="true">→</span><span>審査に活用</span></div>
+              <p class="service-permit-target">審査対象：BIMのデータそのものへ拡大</p>
+              <p>共通形式「IFC」で渡す3D形状や仕様などの情報も審査対象へ。モデルの情報表示やプログラムを使い、審査者の確認を支援する仕組みが検討されています。</p>
+              <div class="service-permit-example"><strong>試作中の例：部屋に光が入るか</strong><p>部屋・窓の面積や採光の条件をデータで扱い、採光基準への適合確認を支援する機能が試作されています。開始時の対象・詳細は今後の制度整備によります。</p></div>
+            </li>
+          </ol>
+          <div class="service-permit-next"><span aria-hidden="true">→</span><p><strong>その先は、データで審査できる対象を順次拡大。</strong><br>図面の整合をBIMで確保し、次にBIMの情報を審査へ活用する。国の工程表は、こうした段階を示しています。</p></div>
+          <div class="service-permit-context">
+            <div><h4>公共分野では、<br>原則とする運用も始まっています。</h4><p>国土交通省の官庁営繕では、2026年度から延べ3,000㎡以上の新営設計業務を、原則としてBIM図面審査の申請対象としています。実施の有無や申請内容などは、受発注者間で協議します。</p><p>民間建築を含む一般の建築確認では、従来の申請も利用できます。そのなかで、BIM図面審査からデータ審査へと、BIMを活用する仕組みが整備されています。</p></div>
+            <div><h4>今の案件で積む経験が、<br>次の仕事の対応力になります。</h4><p>部材の位置や仕様を入力し、図面とモデルをそろえ、変更を反映する。その実務を今から積み重ねることが、申請にも施工にも使えるBIMにつながります。</p><p>Tojo nexusは、確認申請用の図面・BIMデータ作成から、施工段階の取り合い・干渉確認まで支援。設計で整えた情報を、現場、さらに引渡し後へ生かします。</p><a class="service-text-link" href="contact.html">確認申請に向けたBIM制作を相談する <span aria-hidden="true">→</span></a></div>
+          </div>
+          <p class="service-permit-sources">2026年9月時点の公表資料に基づきます。制度・計画の出典：<a href="https://www.mlit.go.jp/jutakukentiku/content/001990514.pdf">BIM図面審査ガイドライン</a> ／ <a href="https://www.mlit.go.jp/jutakukentiku/build/content/001989778.pdf">BIMデータ審査の試作・工程表</a> ／ <a href="https://www.mlit.go.jp/jutakukentiku/build/content/001986721.pdf">国の示す将来像</a> ／ <a href="https://www.mlit.go.jp/gobuild/content/001733645.pdf">官庁営繕のBIM活用</a> ／ <a href="https://bimpermit.jp/qa/?type=1">制度Q&amp;A</a></p>
+        </section>
       </div>
     </section>
 
