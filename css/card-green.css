@@ -1,21 +1,21 @@
-/* CODEX / 2026-09-22. Approved business-card texture and shared teal palette.
+/* CODEX / 2026-09-22. Pure white type and surfaces against the approved card-green background.
    Loaded last; layout, page copy, architectural images and motion stay in their existing sources. */
 :root {
   --bg: #082c34;
   --bg-2: #103b43;
-  --paper: #edf3f1;
-  --paper-2: #dce9e6;
-  --ink: #12383f;
-  --muted: #b4cbc9;
-  --muted-dark: #4c686b;
-  --readable-muted: #bfd2cf;
-  --line: rgba(181, 214, 211, .22);
-  --line-dark: rgba(18, 56, 63, .18);
-  --accent: #b5d6d3;
-  --accent-soft: #d4e8e4;
-  --brass: #b5d6d3;
-  --digital: #a9ced0;
-  --white: #f4f7f3;
+  --paper: #ffffff;
+  --paper-2: #f3f3f3;
+  --ink: #202426;
+  --muted: #c5c5c5;
+  --muted-dark: #585858;
+  --readable-muted: #d0d0d0;
+  --line: rgba(255,255,255, .22);
+  --line-dark: rgba(0,0,0, .18);
+  --accent: #ffffff;
+  --accent-soft: #ededed;
+  --brass: #ffffff;
+  --digital: #ffffff;
+  --white: #ffffff;
   --card-texture: url("../images/card-green-20260922.webp");
 }
 
@@ -44,21 +44,21 @@ body { background-color: var(--bg); }
 
 .header {
   background: linear-gradient(180deg, rgba(8,44,52,.94), rgba(8,44,52,.74));
-  border-bottom-color: rgba(181,214,211,.12);
+  border-bottom-color: rgba(255,255,255,.12);
 }
 .header.is-scrolled, .header.is-solid { background: rgba(8,44,52,.96); }
 .brand-text span { color: var(--readable-muted); }
-.nav a, .lang-mark { color: #c1d4d1; }
+.nav a, .lang-mark { color: #eeeeee; }
 .nav a:hover, .nav a.is-current { color: var(--white); }
 .header-cta, .btn-primary {
   color: var(--ink);
   background: var(--accent);
   border-color: var(--accent);
 }
-.header-cta:hover { background: #d4e8e4; color: var(--ink); border-color: #d4e8e4; }
-.btn-primary:hover { background: #d4e8e4; border-color: #d4e8e4; opacity: 1; }
-.btn-ghost { background: rgba(8,44,52,.42); border-color: rgba(181,214,211,.65); }
-.btn-ghost:hover { background: rgba(181,214,211,.12); opacity: 1; }
+.header-cta:hover { background: #ededed; color: var(--ink); border-color: #ededed; }
+.btn-primary:hover { background: #ededed; border-color: #ededed; opacity: 1; }
+.btn-ghost { background: rgba(8,44,52,.42); border-color: rgba(255,255,255,.65); }
+.btn-ghost:hover { background: rgba(255,255,255,.12); opacity: 1; }
 
 /* Keep the existing architectural dissolve visible over the card's green ground. */
 .home-refined .hero, .home-refined .hero-ambient {
@@ -77,59 +77,58 @@ body { background-color: var(--bg); }
 }
 .gold-title {
   color: var(--white);
-  background: linear-gradient(180deg, #f4f7f3, #b5d6d3);
-  background-clip: text;
-  -webkit-background-clip: text;
+  background: none;
+  -webkit-text-fill-color: currentColor;
   filter: none;
 }
 .home-refined .hero-ambient h1 { text-shadow: 0 2px 18px rgba(4,27,32,.55); }
-.hero-lead { color: #d5e3df; }
+.hero-lead { color: #eeeeee; }
 .hero-lead[lang="en"], .brass-text, .section-dark .lede, .section .lede-en.dark { color: var(--accent-soft); }
-.hero-ambient-note, .motion-toggle { color: #bfd2cf; }
-.motion-toggle { border-bottom-color: rgba(181,214,211,.4); }
+.hero-ambient-note, .motion-toggle { color: #d0d0d0; }
+.motion-toggle { border-bottom-color: rgba(255,255,255,.4); }
 
-/* Light reading sections use the same cool palette with accessible dark accents. */
+/* Pure white reading surfaces and neutral charcoal text. */
 .section-paper {
-  --accent: #285e62;
-  --accent-soft: #285e62;
-  --brass: #285e62;
-  --muted: #4c686b;
-  --readable-muted: #4c686b;
+  --accent: #303638;
+  --accent-soft: #303638;
+  --brass: #303638;
+  --muted: #585858;
+  --readable-muted: #585858;
   background: var(--paper);
 }
 .section-paper .en-line, .section-paper h2 .en-line, .section-paper .card .en-copy,
-.section-paper .lede-en, .section-paper .issue-list .en-line { color: #285e62; }
-.section-paper .text-link { color: #285e62; border-color: #285e62; }
+.section-paper .lede-en, .section-paper .issue-list .en-line { color: #303638; }
+.section-paper .text-link { color: #303638; border-color: #303638; }
 .section-paper .text-link:hover { color: var(--ink); border-color: var(--ink); }
 .section-paper .btn-primary { color: var(--white); }
-.section-paper .btn-primary:hover { background: #16434b; border-color: #16434b; }
-.section-paper .partner-support { color: #4c686b; }
-.section-paper .card { background: #f7faf8; }
+.section-paper .btn-primary:hover { background: #383e40; border-color: #383e40; }
+.section-paper .partner-support { color: #585858; }
+.section-paper .card { background: #ffffff; }
 
 .source-model, .service-model-evidence { background: #0b3039; border-color: var(--line); }
 .service-model-demo {
-  border-color: rgba(181,214,211,.34);
-  background: radial-gradient(ellipse at 50% 43%, rgba(169,206,208,.12), rgba(8,44,52,.42) 72%);
+  border-color: rgba(255,255,255,.34);
+  background: radial-gradient(ellipse at 50% 43%, rgba(255,255,255,.08), rgba(8,44,52,.42) 72%);
 }
 .model-panels {
-  background-image: linear-gradient(rgba(181,214,211,.06) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(181,214,211,.06) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
 }
-.bim-flow-art { color: #c2d9d8; }
+.bim-flow-art { color: #ffffff; }
 .bim-flow-art [stroke="#c9b48a"] { stroke: var(--digital); }
 .bim-flow-art [fill="#c9b48a"] { fill: var(--digital); }
-.model-controls button[aria-pressed="true"] { background: rgba(181,214,211,.1); }
-.model-controls button:hover { background: rgba(181,214,211,.08); }
-.service-page .vision-commitment, .service-page .service-permit-next { background: rgba(181,214,211,.06); }
+.model-controls button[aria-pressed="true"] { background: rgba(255,255,255,.1); }
+.model-controls button:hover { background: rgba(255,255,255,.08); }
+.service-page .vision-commitment, .service-page .service-permit-next { background: rgba(255,255,255,.06); }
 .service-page .service-audience, .service-page .service-permit-stages > li,
 .article-toc, .article-contact { background-color: rgba(8,44,52,.32); }
 .knowledge-body p, .knowledge-body ul, .knowledge-body ol,
-.service-faq details p, .knowledge-hero .article-summary { color: #ceddda; }
+.service-faq details p, .knowledge-hero .article-summary { color: #dedede; }
 
 @media (hover:hover) and (prefers-reduced-motion:no-preference) {
   :is(.service-audience,.vision-benefits > article,.service-permit-stages > li,.knowledge-card):hover {
-    border-color: rgba(181,214,211,.65);
-    box-shadow: inset 0 2px 0 rgba(181,214,211,.35);
+    border-color: rgba(255,255,255,.65);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.35);
   }
 }
 @media (max-width:900px) {
@@ -137,5 +136,28 @@ body { background-color: var(--bg); }
   .hero-atmosphere {
     background: linear-gradient(90deg, rgba(8,44,52,.45), rgba(8,44,52,.12)),
                 linear-gradient(180deg, rgba(8,44,52,.06), rgba(8,44,52,.14) 35%, rgba(8,44,52,.62) 76%);
+  }
+}
+
+/* CODEX / 2026-09-22: explicit neutral rendering where older styles used tinted whites. */
+.brand-text strong { color: #fff; }
+.brand img { filter: grayscale(1); background: #fff; mix-blend-mode: normal; opacity: 1; }
+.hero-lead[lang="en"], .hero h1 .en-line { color: #eee; }
+.section-paper { --digital: #303638; }
+.section-paper .bim-flow-art { color: #303638; }
+.section-paper .btn-ghost { color: #202426; background: transparent; border-color: #585858; }
+.section-paper .btn-ghost:hover { background: #f3f3f3; }
+.footer p, .footer a, .bilingual p[lang="en"] { color: #dedede; }
+.section-paper .bilingual p[lang="en"] { color: #585858; }
+.section:not(.section-paper) .lede { color: #dedede; }
+.line-qr { background: #fff; filter: none; mix-blend-mode: normal; }
+.hero-atmosphere {
+  background: linear-gradient(90deg, rgba(0,0,0,.50), rgba(0,0,0,.20) 52%, rgba(0,0,0,.08)),
+              linear-gradient(180deg, transparent 68%, rgba(0,0,0,.28));
+}
+@media (max-width:900px) {
+  .hero-atmosphere {
+    background: linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,.08)),
+                linear-gradient(180deg, transparent, rgba(0,0,0,.10) 35%, rgba(0,0,0,.38) 76%);
   }
 }
