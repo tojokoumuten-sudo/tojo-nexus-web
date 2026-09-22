@@ -1,0 +1,141 @@
+/* CODEX / 2026-09-22. Approved business-card texture and shared teal palette.
+   Loaded last; layout, page copy, architectural images and motion stay in their existing sources. */
+:root {
+  --bg: #082c34;
+  --bg-2: #103b43;
+  --paper: #edf3f1;
+  --paper-2: #dce9e6;
+  --ink: #12383f;
+  --muted: #b4cbc9;
+  --muted-dark: #4c686b;
+  --readable-muted: #bfd2cf;
+  --line: rgba(181, 214, 211, .22);
+  --line-dark: rgba(18, 56, 63, .18);
+  --accent: #b5d6d3;
+  --accent-soft: #d4e8e4;
+  --brass: #b5d6d3;
+  --digital: #a9ced0;
+  --white: #f4f7f3;
+  --card-texture: url("../images/card-green-20260922.webp");
+}
+
+body { background-color: var(--bg); }
+/* The same image is cached once across all nine pages. Gradients leave quiet areas behind copy. */
+.section:not(.section-paper), .page-hero, .footer {
+  background-color: var(--bg);
+  background-image: linear-gradient(110deg, rgba(8,44,52,.72), rgba(8,44,52,.48)), var(--card-texture);
+  background-position: center;
+  background-size: cover;
+}
+.page-hero {
+  background-image: linear-gradient(100deg, rgba(8,44,52,.48), rgba(8,44,52,.12)), var(--card-texture);
+  background-position: center, center 36%;
+}
+.section.approach-section {
+  background-image: linear-gradient(110deg, rgba(8,44,52,.68), rgba(8,44,52,.38)), var(--card-texture);
+}
+.section.contact-band {
+  background-image: linear-gradient(100deg, rgba(8,44,52,.40), rgba(8,44,52,.10)), var(--card-texture);
+  background-position: center, center 65%;
+}
+.footer {
+  background-image: linear-gradient(rgba(8,44,52,.82), rgba(8,44,52,.9)), var(--card-texture);
+}
+
+.header {
+  background: linear-gradient(180deg, rgba(8,44,52,.94), rgba(8,44,52,.74));
+  border-bottom-color: rgba(181,214,211,.12);
+}
+.header.is-scrolled, .header.is-solid { background: rgba(8,44,52,.96); }
+.brand-text span { color: var(--readable-muted); }
+.nav a, .lang-mark { color: #c1d4d1; }
+.nav a:hover, .nav a.is-current { color: var(--white); }
+.header-cta, .btn-primary {
+  color: var(--ink);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.header-cta:hover { background: #d4e8e4; color: var(--ink); border-color: #d4e8e4; }
+.btn-primary:hover { background: #d4e8e4; border-color: #d4e8e4; opacity: 1; }
+.btn-ghost { background: rgba(8,44,52,.42); border-color: rgba(181,214,211,.65); }
+.btn-ghost:hover { background: rgba(181,214,211,.12); opacity: 1; }
+
+/* Keep the existing architectural dissolve visible over the card's green ground. */
+.home-refined .hero, .home-refined .hero-ambient {
+  background-color: var(--bg);
+  background-image: linear-gradient(95deg, rgba(8,44,52,.28), rgba(8,44,52,.03)), var(--card-texture);
+  background-size: cover;
+  background-position: center;
+}
+.hero-atmosphere {
+  background: linear-gradient(90deg, rgba(8,44,52,.62), rgba(8,44,52,.28) 52%, rgba(8,44,52,.12)),
+              linear-gradient(180deg, transparent 68%, rgba(8,44,52,.72));
+}
+.hero-media::after {
+  background: linear-gradient(90deg, rgba(8,44,52,.86), rgba(8,44,52,.38)),
+              linear-gradient(180deg, transparent, rgba(8,44,52,.7));
+}
+.gold-title {
+  color: var(--white);
+  background: linear-gradient(180deg, #f4f7f3, #b5d6d3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: none;
+}
+.home-refined .hero-ambient h1 { text-shadow: 0 2px 18px rgba(4,27,32,.55); }
+.hero-lead { color: #d5e3df; }
+.hero-lead[lang="en"], .brass-text, .section-dark .lede, .section .lede-en.dark { color: var(--accent-soft); }
+.hero-ambient-note, .motion-toggle { color: #bfd2cf; }
+.motion-toggle { border-bottom-color: rgba(181,214,211,.4); }
+
+/* Light reading sections use the same cool palette with accessible dark accents. */
+.section-paper {
+  --accent: #285e62;
+  --accent-soft: #285e62;
+  --brass: #285e62;
+  --muted: #4c686b;
+  --readable-muted: #4c686b;
+  background: var(--paper);
+}
+.section-paper .en-line, .section-paper h2 .en-line, .section-paper .card .en-copy,
+.section-paper .lede-en, .section-paper .issue-list .en-line { color: #285e62; }
+.section-paper .text-link { color: #285e62; border-color: #285e62; }
+.section-paper .text-link:hover { color: var(--ink); border-color: var(--ink); }
+.section-paper .btn-primary { color: var(--white); }
+.section-paper .btn-primary:hover { background: #16434b; border-color: #16434b; }
+.section-paper .partner-support { color: #4c686b; }
+.section-paper .card { background: #f7faf8; }
+
+.source-model, .service-model-evidence { background: #0b3039; border-color: var(--line); }
+.service-model-demo {
+  border-color: rgba(181,214,211,.34);
+  background: radial-gradient(ellipse at 50% 43%, rgba(169,206,208,.12), rgba(8,44,52,.42) 72%);
+}
+.model-panels {
+  background-image: linear-gradient(rgba(181,214,211,.06) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(181,214,211,.06) 1px, transparent 1px);
+}
+.bim-flow-art { color: #c2d9d8; }
+.bim-flow-art [stroke="#c9b48a"] { stroke: var(--digital); }
+.bim-flow-art [fill="#c9b48a"] { fill: var(--digital); }
+.model-controls button[aria-pressed="true"] { background: rgba(181,214,211,.1); }
+.model-controls button:hover { background: rgba(181,214,211,.08); }
+.service-page .vision-commitment, .service-page .service-permit-next { background: rgba(181,214,211,.06); }
+.service-page .service-audience, .service-page .service-permit-stages > li,
+.article-toc, .article-contact { background-color: rgba(8,44,52,.32); }
+.knowledge-body p, .knowledge-body ul, .knowledge-body ol,
+.service-faq details p, .knowledge-hero .article-summary { color: #ceddda; }
+
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+  :is(.service-audience,.vision-benefits > article,.service-permit-stages > li,.knowledge-card):hover {
+    border-color: rgba(181,214,211,.65);
+    box-shadow: inset 0 2px 0 rgba(181,214,211,.35);
+  }
+}
+@media (max-width:900px) {
+  .nav.is-open { background: #082c34; }
+  .hero-atmosphere {
+    background: linear-gradient(90deg, rgba(8,44,52,.45), rgba(8,44,52,.12)),
+                linear-gradient(180deg, rgba(8,44,52,.06), rgba(8,44,52,.14) 35%, rgba(8,44,52,.62) 76%);
+  }
+}
