@@ -23,8 +23,9 @@
 <link rel="stylesheet" href="css/knowledge.css?v=20260909-seo1">
 <link rel="preload" href="images/card-green-20260922.webp" as="image" type="image/webp">
 <link rel="stylesheet" href="css/card-green.css?v=20260922-card2">
+<link rel="stylesheet" href="css/cinema-20260926.css">
 </head>
-<body class="home-refined">
+<body class="home-refined cinema-home">
 <!-- SITE HEADER -->
     <a class="skip" href="#main">Skip / コンテンツへスキップ</a>
     <header class="header" data-header>
@@ -47,29 +48,38 @@
     </header>
   <!-- /SITE HEADER -->
 <main id="main">
-<section class="hero hero-ambient" data-ambient>
-<div class="architecture-background" aria-hidden="true">
-  <div class="architecture-slide architecture-slide--museum" style="--stage-index:0"><div class="architecture-orbit"><img src="images/concept-museum.webp" alt="" width="1672" height="941" decoding="async" fetchpriority="high"></div></div>
-  <div class="architecture-slide architecture-slide--tower" style="--stage-index:1"><div class="architecture-orbit"><img src="images/concept-tower.webp" alt="" width="1672" height="941" decoding="async" loading="lazy"></div></div>
-  <div class="architecture-slide architecture-slide--opera" style="--stage-index:2"><div class="architecture-orbit"><img src="images/concept-opera-pavilion.webp" alt="" width="1672" height="941" decoding="async" loading="lazy"></div></div>
-  <div class="architecture-slide architecture-slide--heritage" style="--stage-index:3"><div class="architecture-orbit"><img src="images/bim-original.webp" alt="" width="784" height="1168" decoding="async" loading="lazy"></div></div>
-  <div class="architecture-slide architecture-slide--gallery" style="--stage-index:4"><div class="architecture-orbit"><img src="images/concept-cantilever-gallery.webp" alt="" width="1672" height="941" decoding="async" loading="lazy"></div></div>
-  <div class="architecture-slide architecture-slide--residence" style="--stage-index:5"><div class="architecture-orbit"><img src="images/concept-terraced-residence.webp" alt="" width="1672" height="940" decoding="async" loading="lazy"></div></div>
-</div>
-<div class="hero-atmosphere" aria-hidden="true"></div>
-<div class="hero-grid" aria-hidden="true"></div>
-<div class="hero-inner">
-<p class="gold-title" lang="en">BIM keeps the job site running</p>
-<div class="hero-copy">
-<p class="kicker">Construction BIM / Kobe — Da Nang</p>
-<h1><span class="headline-line">現場で使えないBIMなら、</span><span class="headline-line">ない方がマシだ。</span><span class="en-line" lang="en">If BIM cannot keep the site moving,<br>it is better not to have it.</span></h1>
-<p class="hero-lead">図面を施工BIMで組み立て、不整合と未決定事項を先回りして整理。Tojo nexusは、監督の<span class="brass-text">「判断の手前」</span>を整えます。</p>
-<p class="hero-lead" lang="en">We prepare the information. Your site makes the decisions.</p>
-<div class="hero-actions"><a class="btn btn-primary" href="contact.html">現場の課題を相談する<small lang="en">Talk about your project</small></a><a class="btn btn-ghost" href="service.html">サービスを見る<small lang="en">Our services</small></a></div>
-</div>
-<div class="hero-ambient-note"><span>建築イメージ <span lang="en">/ Architecture concepts</span></span><button type="button" class="motion-toggle" data-motion-toggle aria-pressed="false" hidden>背景の動きを止める</button></div>
-<dl class="hero-meta"><div><dt>Founded</dt><dd>2026</dd></div><div><dt>Sites</dt><dd>神戸 / ダナン<small lang="en">Kobe / Da Nang</small></dd></div><div><dt>Focus</dt><dd>施工BIM × 現場支援<small lang="en">Construction BIM / Field support</small></dd></div></dl>
-</div>
+<!-- CODEX / 2026-09-26: construction film and scroll-led brand opening. -->
+<section class="cinema-hero" data-cinema-hero aria-label="Tojo nexus / 建設現場のイメージ映像">
+  <div class="cinema-stage" data-cinema-stage>
+    <picture class="cinema-picture" aria-hidden="true">
+      <source media="(max-width:767px)" srcset="images/construction-film-20260926-mobile.webp">
+      <img src="images/construction-film-20260926.webp" width="1600" height="900" alt="" fetchpriority="high">
+    </picture>
+    <video class="cinema-film" data-cinema-video data-desktop-src="images/construction-film-20260926.mp4" data-mobile-src="images/construction-film-20260926-mobile.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" disablepictureinpicture></video>
+    <div class="cinema-shade" aria-hidden="true"></div>
+  </div>
+  <div class="cinema-identity">
+    <p class="cinema-eyebrow">DESIGN × CONSTRUCTION BIM</p>
+    <p class="cinema-wordmark" aria-label="Tojo nexus"><span aria-hidden="true"><span class="cinema-letter-mask"><span class="cinema-letter" style="--letter-order:0">T</span></span><span class="cinema-letter-mask"><span class="cinema-letter" style="--letter-order:1">O</span></span><span class="cinema-letter-mask"><span class="cinema-letter" style="--letter-order:2">J</span></span><span class="cinema-letter-mask"><span class="cinema-letter" style="--letter-order:3">O</span></span><span class="cinema-word-gap"></span><span class="cinema-letter-mask"><span class="cinema-letter" style="--letter-order:4">N</span></span><span class="cinema-letter-mask"><span class="cinema-letter" style="--letter-order:5">E</span></span><span class="cinema-letter-mask"><span class="cinema-letter" style="--letter-order:6">X</span></span><span class="cinema-letter-mask"><span class="cinema-letter" style="--letter-order:7">U</span></span><span class="cinema-letter-mask"><span class="cinema-letter" style="--letter-order:8">S</span></span></span></p>
+    <p class="cinema-tagline" lang="en">BIM keeps the job site running</p>
+  </div>
+  <div class="cinema-bottom">
+    <p class="cinema-location">KOBE — DA NANG<span>建設現場のイメージ映像</span></p>
+    <a class="cinema-scroll" href="#intro">SCROLL TO EXPLORE</a>
+    <div class="cinema-controls">
+      <button class="cinema-toggle" type="button" data-cinema-toggle hidden aria-label="背景動画を再生する"><span aria-hidden="true">▶</span></button>
+      <a class="cinema-service-link" href="service.html">サービスを見る<span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+<section class="section section-paper cinema-intro" id="intro">
+  <div class="wrap">
+    <div class="cinema-intro-layout">
+      <div><p class="kicker">Construction BIM / Kobe — Da Nang</p><h1><span class="headline-line">現場で使えないBIMなら、</span><span class="headline-line">ない方がマシだ。</span><span class="en-line" lang="en">If BIM cannot keep the site moving,<br/>it is better not to have it.</span></h1></div>
+      <div class="cinema-intro-copy"><p class="hero-lead">図面を施工BIMで組み立て、不整合と未決定事項を先回りして整理。Tojo nexusは、監督の<span class="brass-text">「判断の手前」</span>を整えます。</p><p class="hero-lead" lang="en">We prepare the information. Your site makes the decisions.</p><div class="hero-actions"><a class="btn btn-primary" href="contact.html">現場の課題を相談する<small lang="en">Talk about your project</small></a><a class="btn btn-ghost" href="service.html">サービスを見る<small lang="en">Our services</small></a></div></div>
+    </div>
+    <dl class="cinema-facts"><div><dt>Founded</dt><dd>2026</dd></div><div><dt>Sites</dt><dd>神戸 / ダナン<small lang="en">Kobe / Da Nang</small></dd></div><div><dt>Focus</dt><dd>施工BIM × 現場支援<small lang="en">Construction BIM / Field support</small></dd></div></dl>
+  </div>
 </section>
 <section class="section approach-section">
 <div class="wrap">
@@ -153,9 +163,11 @@
         <a href="contact.html">相談・見積依頼</a>
       </nav>
       <div class="wrap copyright">© 2026 Tojo nexus Co., Ltd.</div>
+      <div class="cinema-footer-wordmark" aria-hidden="true">TOJO NEXUS</div>
     </footer>
   <!-- /SITE FOOTER -->
 <script src="js/site.js?v=20260909-seo1"></script>
 <script src="js/motion.js?v=20260922-motion1"></script>
+<script src="js/cinema-20260926.js"></script>
 </body>
 </html>
