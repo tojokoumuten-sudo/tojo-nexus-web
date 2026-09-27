@@ -31,6 +31,17 @@
 <style id="cinema-text-contrast">
 .cinema-sequence .cinema-shade { background: linear-gradient(180deg, rgba(0,0,0,.52) 0%, rgba(0,0,0,.46) 32%, rgba(0,0,0,.38) 65%, rgba(0,0,0,.70) 100%); }
 </style>
+<!-- CODEX / 2026-09-28: one location summary, full circular backing, edge-fitted letter outlines. -->
+<style id="home-brand-tidy">
+.cinema-home .header .brand img { background: #fff; }
+.cinema-home .cinema-controls { margin-left: auto; }
+.cinema-home .footer { padding-bottom: 0; }
+.cinema-home .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.cinema-home .footer > .brandclose-label { display: block; width: 100%; margin: 70px 0 0; padding: 0; color: #fff; font-size: 0; line-height: 0; overflow: hidden; }
+.cinema-home .brandclose-label svg { display: block; width: 100%; height: auto; }
+@media (max-width: 760px) { .cinema-home .footer-grid { grid-template-columns: 1fr; } }
+@media print { .cinema-home .footer > .brandclose-label { display: none; } }
+</style>
 </head>
 <body class="home-refined cinema-home">
 <!-- SITE HEADER -->
@@ -73,7 +84,6 @@
 
 </div>
 <div class="cinema-bottom">
-<p class="cinema-location">KOBE — DA NANG</p>
 <a class="cinema-scroll" href="#intro">SCROLL TO EXPLORE</a>
 <div class="cinema-controls">
 <button aria-label="背景動画を再生する" class="cinema-toggle" data-cinema-toggle="" hidden="" type="button"><span aria-hidden="true">▶</span></button>
@@ -84,7 +94,7 @@
 <section class="section cinema-intro" id="intro">
 <div class="wrap">
 <div class="cinema-intro-layout">
-<div><p class="kicker">Construction BIM / Kobe — Da Nang</p><h1><span class="headline-line">現場で使えないBIMなら、</span><span class="headline-line">ない方がマシだ。</span><span class="en-line" lang="en">If BIM cannot keep the site moving,<br/>it is better not to have it.</span></h1></div>
+<div><p class="kicker">Construction BIM</p><h1><span class="headline-line">現場で使えないBIMなら、</span><span class="headline-line">ない方がマシだ。</span><span class="en-line" lang="en">If BIM cannot keep the site moving,<br/>it is better not to have it.</span></h1></div>
 <div class="cinema-intro-copy"><p class="hero-lead">図面を施工BIMで組み立て、不整合と未決定事項を先回りして整理。Tojo nexusは、監督の<span class="brass-text">「判断の手前」</span>を整えます。</p><p class="hero-lead" lang="en">We prepare the information. Your site makes the decisions.</p><div class="hero-actions"><a class="btn btn-primary" href="contact.html">現場の課題を相談する<small lang="en">Talk about your project</small></a><a class="btn btn-ghost" href="service.html">サービスを見る<small lang="en">Our services</small></a></div></div>
 </div>
 <dl class="cinema-facts"><div><dt>Founded</dt><dd>2026</dd></div><div><dt>Sites</dt><dd>神戸 / ダナン<small lang="en">Kobe / Da Nang</small></dd></div><div><dt>Focus</dt><dd>施工BIM × 現場支援<small lang="en">Construction BIM / Field support</small></dd></div></dl>
@@ -127,7 +137,7 @@
 <article class="card"><p class="kicker">02 Information</p><h3>図面・数量・打ち合わせ</h3><p class="en-copy" lang="en">One model, ready for the next discussion.</p><p>一度整えたモデルから、必要な平面図・断面図・3D画像を打ち合わせ資料へ展開。図面を毎回描き直す手間を減らし、モデルの範囲と条件に応じた数量整理も支えます。</p></article>
 <article class="card"><p class="kicker">03 Field partner</p><h3>現場の進行に合わせた支援</h3><p class="en-copy" lang="en">Support that continues beyond delivery.</p><p>納品後も現場の進行に合わせて、変更や追加の確認事項を整理。監督が判断に集中できるよう、その都度サポートします。</p></article>
 </div>
-<div class="service-bottom"><p>神戸窓口とダナン制作。現場の言葉で要件を整理し、制作と確認をつなぎます。</p><a class="text-link" href="service.html">サービスの詳細 <span aria-hidden="true">↗</span></a></div>
+<div class="service-bottom"><p>現場の言葉で要件を整理し、制作と確認をつなぎます。</p><a class="text-link" href="service.html">サービスの詳細 <span aria-hidden="true">↗</span></a></div>
 </div>
 </section>
 <section class="section section-paper">
@@ -159,11 +169,6 @@
           <p class="line-label">LINE</p>
           <img class="line-qr" src="images/line-qr.png" alt="LINE QR code / 公式LINE" width="317" height="317" loading="lazy">
         </div>
-        <div>
-          <h3>Hubs</h3>
-          <p>Kobe, Japan</p>
-          <p>Da Nang, Vietnam<br>3F, Indochina Riverside Office Tower<br>74 Bạch Đằng, Hải Châu<br>Đà Nẵng 550000</p>
-        </div>
       </div>
       <nav class="wrap footer-links" aria-label="ページと施工BIMの活用ガイド">
         <a href="service.html">施工BIMの外注・制作支援</a>
@@ -174,7 +179,7 @@
         <a href="contact.html">相談・見積依頼</a>
       </nav>
       <div class="wrap copyright">© 2026 Tojo nexus Co., Ltd.</div>
-      <div class="cinema-footer-wordmark brandclose-wordmark" aria-hidden="true">TOJONEXUS</div>
+      <div class="brandclose-wordmark brandclose-label" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="47 -1491 13030.04 1491" width="13030.040000" height="1491.000000" aria-hidden="true" focusable="false"><path fill="currentColor" d="M47 -1466H1424V-1104H962V0H509V-1104H47ZM1438.88 -732Q1438.88 -1091 1638.88 -1291.0Q1838.88 -1491 2195.88 -1491Q2561.88 -1491 2759.88 -1294.5Q2957.88 -1098 2957.88 -744Q2957.88 -487 2871.38 -322.5Q2784.88 -158 2621.38 -66.5Q2457.88 25 2213.88 25Q1965.88 25 1803.38 -54.0Q1640.88 -133 1539.88 -304.0Q1438.88 -475 1438.88 -732ZM1891.88 -730Q1891.88 -508 1974.38 -411.0Q2056.88 -314 2198.88 -314Q2344.88 -314 2424.88 -409.0Q2504.88 -504 2504.88 -750Q2504.88 -957 2421.38 -1052.5Q2337.88 -1148 2194.88 -1148Q2057.88 -1148 1974.88 -1051.0Q1891.88 -954 1891.88 -730ZM3678.76 -1466H4132.76V-669Q4132.76 -418 4088.26 -287.0Q4043.76 -156 3909.26 -65.0Q3774.76 26 3564.76 26Q3342.76 26 3220.76 -34.0Q3098.76 -94 3032.26 -209.5Q2965.76 -325 2953.76 -495L3386.76 -554Q3387.76 -457 3403.76 -410.0Q3419.76 -363 3457.76 -334Q3483.76 -315 3531.76 -315Q3607.76 -315 3643.26 -371.5Q3678.76 -428 3678.76 -562ZM4244.64 -732Q4244.64 -1091 4444.64 -1291.0Q4644.64 -1491 5001.64 -1491Q5367.64 -1491 5565.64 -1294.5Q5763.64 -1098 5763.64 -744Q5763.64 -487 5677.14 -322.5Q5590.64 -158 5427.14 -66.5Q5263.64 25 5019.64 25Q4771.64 25 4609.14 -54.0Q4446.64 -133 4345.64 -304.0Q4244.64 -475 4244.64 -732ZM4697.64 -730Q4697.64 -508 4780.14 -411.0Q4862.64 -314 5004.64 -314Q5150.64 -314 5230.64 -409.0Q5310.64 -504 5310.64 -750Q5310.64 -957 5227.14 -1052.5Q5143.64 -1148 5000.64 -1148Q4863.64 -1148 4780.64 -1051.0Q4697.64 -954 4697.64 -730ZM5877.52 -1466H6300.52L6852.52 -655V-1466H7279.52V0H6852.52L6303.52 -805V0H5877.52ZM7446.400000000001 -1466H8660.400000000001V-1153H7900.400000000001V-920H8605.400000000001V-621H7900.400000000001V-332H8682.400000000001V0H7446.400000000001ZM8692.28 -1466H9191.28L9451.28 -1015L9703.28 -1466H10197.28L9741.28 -756L10240.28 0H9731.28L9442.28 -471L9152.28 0H8646.28L9152.28 -764ZM11207.16 -1466H11659.16V-592Q11659.16 -462 11618.66 -346.5Q11578.16 -231 11491.66 -144.5Q11405.16 -58 11310.16 -23Q11178.16 26 10993.16 26Q10886.16 26 10759.66 11.0Q10633.16 -4 10548.16 -48.5Q10463.16 -93 10392.66 -175.0Q10322.16 -257 10296.16 -344Q10254.16 -484 10254.16 -592V-1466H10706.16V-571Q10706.16 -451 10772.66 -383.5Q10839.16 -316 10957.16 -316Q11074.16 -316 11140.66 -382.5Q11207.16 -449 11207.16 -571ZM11747.04 -485 12178.04 -512Q12192.04 -407 12235.04 -352Q12305.04 -263 12435.04 -263Q12532.04 -263 12584.54 -308.5Q12637.04 -354 12637.04 -414Q12637.04 -471 12587.04 -516Q12537.04 -561 12355.04 -601Q12057.04 -668 11930.04 -779Q11802.04 -890 11802.04 -1062Q11802.04 -1175 11867.54 -1275.5Q11933.04 -1376 12064.54 -1433.5Q12196.04 -1491 12425.04 -1491Q12706.04 -1491 12853.54 -1386.5Q13001.04 -1282 13029.04 -1054L12602.04 -1029Q12585.04 -1128 12530.54 -1173.0Q12476.04 -1218 12380.04 -1218Q12301.04 -1218 12261.04 -1184.5Q12221.04 -1151 12221.04 -1103Q12221.04 -1068 12254.04 -1040Q12286.04 -1011 12406.04 -986Q12703.04 -922 12831.54 -856.5Q12960.04 -791 13018.54 -694.0Q13077.04 -597 13077.04 -477Q13077.04 -336 12999.04 -217.0Q12921.04 -98 12781.04 -36.5Q12641.04 25 12428.04 25Q12054.04 25 11910.04 -119.0Q11766.04 -263 11747.04 -485Z"/></svg></div>
     </footer>
   <!-- /SITE FOOTER -->
 <script src="js/site.js?v=20260909-seo1"></script>
