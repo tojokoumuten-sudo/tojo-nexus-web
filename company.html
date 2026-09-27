@@ -28,6 +28,12 @@
 <link rel="stylesheet" href="css/card-green.css?v=20260922-card2">
 <!-- CODEX / 2026-09-26: shared closing wordmark and homepage brand visibility. -->
 <link rel="stylesheet" href="css/brand-close-20260926.css">
+<!-- CODEX / 2026-09-28: continuous Japanese headline with English below; long-form BIM explanation stays on the BIM page. -->
+<style id="company-title-layout">
+.page-hero h1.company-title { max-width: none; font-size: clamp(26px,3.1vw,48px); }
+.company-title-ja { display: block; }
+@media (min-width: 900px) { .company-title-ja { white-space: nowrap; } }
+</style>
 </head>
 <body>
 <!-- SITE HEADER -->
@@ -55,7 +61,7 @@
     <header class="page-hero">
       <div class="wrap">
         <p class="kicker">Company</p>
-        <h1>現場を止めないための、<br>施工パートナーです。<span class="en-line" lang="en">A construction partner, so the site does not stop.</span></h1>
+        <h1 class="company-title"><span class="company-title-ja">現場を止めないための施工パートナーです。</span><span class="en-line" lang="en">A construction partner, so the site does not stop.</span></h1>
       </div>
     </header>
     <section class="section">
@@ -66,8 +72,6 @@
           <p lang="en">Delay, drawing conflict, waiting for a decision. These are not a lack of effort on site. They are structural.</p>
           <p lang="ja">Tojo nexusは、建築現場での実務経験をもとに、現場で使えるサービスを考えています。どこを確かめ、何を揃えれば判断できるか。現場を知る視点を、施工BIMと資料づくりに生かします。</p>
           <p lang="en">Our services are shaped by practical experience on construction sites. What needs checking? What information will make a decision possible? That understanding guides our construction BIM and the documents we prepare.</p>
-          <p lang="ja">施工BIMは、建てて終わりではありません。部材や設備の位置・仕様、施工時の変更内容を残し、完成した建物に合わせて情報を整え、更新していくことで、「建物のデータベース」として機能します。施工中の判断から、完成後の点検・修繕・設備更新、将来の改修まで。建物を使い続けるための情報として活用できます。</p>
-          <p lang="en">Construction BIM has value beyond completion. Recording component and equipment locations, specifications, and construction changes—and keeping that information aligned with the building—creates a lasting building database. It can support decisions during construction, then inspections, maintenance, equipment replacement, and future renovations throughout the building’s life.</p>
       </div>
       <div class="wrap" style="margin-top:64px;max-width:720px">
           <table class="table">
