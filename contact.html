@@ -67,7 +67,7 @@
           <p class="line-label">LINE</p>
           <img class="line-qr" src="images/line-qr.png" alt="LINE QR code / 公式LINE">
         </div>
-        <form class="form" action="https://formsubmit.co/tojo-h@tojo-nexus.com" method="POST">
+        <form id="contact-form" class="form" style="scroll-margin-top:calc(var(--header-h) + 24px)" action="https://formsubmit.co/tojo-h@tojo-nexus.com" method="POST">
           <input type="hidden" name="_subject" value="Tojo nexus サイトからの問い合わせ">
           <input type="hidden" name="_captcha" value="false">
           <label><span class="lbl">名前<i lang="en">Name</i></span><input name="name" autocomplete="name" required></label>
@@ -78,6 +78,7 @@
             <select name="type" required>
               <option value="">選択してください / Please select</option>
               <option>サービスについて / Services</option>
+              <option value="revit-family">Revitファミリ作成について / Revit families</option>
               <option>お見積り依頼 / Estimate</option>
               <option>採用について / Careers</option>
               <option>パートナーシップ / Partnership</option>
@@ -125,5 +126,7 @@
   <!-- /SITE FOOTER -->
   <script src="js/site.js?v=20260909-seo1"></script>
 <script src="js/motion.js?v=20260922-motion1"></script>
+<!-- CODEX / 2026-10-14: select family inquiries when arriving from the family service. -->
+<script src="js/family.js?v=20261014-family1"></script>
 </body>
 </html>
