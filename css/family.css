@@ -89,3 +89,13 @@
   .family-teaser h2 { font-size:19px; }
 }
 @media print { .family-demo-controls { display:none; } .family-page .family-section { break-inside:avoid; } }
+
+/* CODEX / 2026-10-14: concise, readable service questions; native HTML works without JS. */
+.family-page .family-questions { padding-bottom:0; }
+.family-questions h2 { margin-bottom:28px; }
+.family-questions-list { border-top:1px solid var(--line); }
+.family-questions details { padding:20px 0; border-bottom:1px solid var(--line); }
+.family-questions summary { font-size:16px; font-weight:500; line-height:1.9; cursor:pointer; color:var(--white); }
+.family-questions summary:focus-visible { outline:3px solid #86d5c0; outline-offset:5px; }
+.family-questions details p { font-size:15px; line-height:2; max-width:65em; margin:16px 0 2px; color:#d1ddde; }
+@media(max-width:760px) { .family-questions h2 { font-size:24px; } .family-questions summary { font-size:15px; } }
