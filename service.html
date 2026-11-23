@@ -56,14 +56,14 @@
 .service-page .vision-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 56px; }
 .service-page .vision-grid > article { min-width: 0; }
 .service-page .vision-topic { font-size: 12px; letter-spacing: .1em; line-height: 1.8; color: var(--brass); margin: 0 0 16px; }
-.service-page .vision-grid h3, .service-page .vision-value > h3, .service-page .vision-example > h3, .service-page .vision-commitment h3 { font-size: clamp(24px,2.5vw,30px); line-height: 1.75; }
-.service-page .vision-grid > article > p:not(.vision-topic), .service-page .vision-value > p:not(.vision-topic), .service-page .vision-example > p:not(.vision-topic), .service-page .vision-commitment > div > p:not(.vision-topic) { font-size: 16px; line-height: 2; margin: 20px 0 0; }
+.service-page .vision-grid h3, .service-page .vision-value > h3, .service-page .vision-commitment h3 { font-size: clamp(24px,2.5vw,30px); line-height: 1.75; }
+.service-page .vision-grid > article > p:not(.vision-topic), .service-page .vision-value > p:not(.vision-topic), .service-page .vision-commitment > div > p:not(.vision-topic) { font-size: 16px; line-height: 2; margin: 20px 0 0; }
 .service-page .vision-barriers { list-style: none; padding: 0; margin: 22px 0 0; }
 .service-page .vision-barriers li { padding: 16px 0; border-top: 1px solid var(--line); }
 .service-page .vision-barriers strong { display: block; font-size: 16px; font-weight: 500; color: var(--white); line-height: 1.8; }
 .service-page .vision-barriers span { display: block; margin-top: 6px; font-size: 15px; line-height: 1.9; }
-.service-page .vision-value, .service-page .vision-policy-grid, .service-page .vision-example { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); }
-.service-page .vision-value > p:not(.vision-topic), .service-page .vision-example > p:not(.vision-topic) { max-width: 62em; }
+.service-page .vision-value, .service-page .vision-policy-grid { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); }
+.service-page .vision-value > p:not(.vision-topic) { max-width: 62em; }
 .service-page .vision-benefits { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; margin-top: 28px; }
 .service-page .vision-benefits > article { padding: 26px 24px; border: 1px solid var(--line); min-width: 0; }
 .service-page .vision-benefits h4 { font-family: var(--sans); font-size: 14px; font-weight: 500; color: var(--brass); margin: 0; line-height: 1.9; }
@@ -76,24 +76,12 @@
 .service-page .vision-world dt { font-size: 16px; color: var(--white); line-height: 1.8; }
 .service-page .vision-world dd { margin: 10px 0 0; font-size: 15px; line-height: 2; }
 .service-page .vision-world a { color: var(--brass); font-size: 13px; text-decoration: underline; text-underline-offset: 4px; margin-left: 8px; }
-.service-page .vision-example .service-flow { margin: 28px 0; }
-.service-page .vision-example .service-flow h4 { font-family: var(--serif); font-size: 20px; font-weight: 600; color: var(--white); line-height: 1.8; margin: 0; }
-.service-page .vision-example .vision-example-note { color: var(--brass); font-size: 15px; }
 .service-page .vision-commitment { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; padding: 36px; margin-top: 48px; border: 1px solid var(--brass); background: rgba(201,180,138,.035); }
 .service-page .vision-commitment > div > p:first-child:not(.vision-topic) { margin-top: 0; }
-.service-page .vision-commitment .vision-commitment-line { font-family: var(--serif); color: var(--brass); font-size: 20px; line-height: 1.9; }
 .service-page .vision-commitment .service-text-link { margin-top: 24px; }
 .service-page .service-vision-story { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 56px; }
 .service-page .service-vision-story h3 { font-size: 23px; line-height: 1.65; color: var(--brass); }
 .service-page .service-vision-story p, .service-page .service-lasting p { font-size: 16px; line-height: 2; margin: 20px 0 0; }
-.service-page .service-flow { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); padding: 0; margin: 48px 0; list-style: none; border-block: 1px solid var(--line); }
-.service-page .service-flow li { position: relative; padding: 28px 24px; min-width: 0; }
-.service-page .service-flow li:first-child { padding-left: 0; }
-.service-page .service-flow li + li { border-left: 1px solid var(--line); }
-.service-page .service-step { display: block; color: var(--brass); font-size: 11px; letter-spacing: .16em; margin-bottom: 16px; }
-.service-page .service-flow h3 { font-size: 22px; line-height: 1.7; }
-.service-page .service-flow p { font-size: 15px; line-height: 1.9; margin: 16px 0; }
-.service-page .service-flow small { font-size: 12px; line-height: 1.8; color: var(--brass); display: block; }
 .service-page .service-lasting { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; }
 .service-page .service-lasting h3 { font-size: clamp(24px,2.4vw,30px); line-height: 1.8; }
 .service-page .service-lasting p:first-child { margin-top: 0; }
@@ -139,7 +127,6 @@
 @media (max-width: 1000px) {
   .service-page .service-audience { padding: 28px 24px; }
   .service-page .service-vision-story, .service-page .service-lasting { gap: 32px; }
-  .service-page .service-flow li { padding-inline: 18px; }
   .service-page .service-permit-stages { gap: 14px; }
   .service-page .service-permit-stages > li { padding: 24px 18px; }
   .service-page .service-permit-stages h4 { font-size: 22px; }
@@ -157,9 +144,6 @@
   .service-page .service-jump a { font-size: 13px; gap: 16px; }
   .service-page .service-section-intro { margin-bottom: 28px; }
   .service-page .service-audience { padding: 28px 22px; }
-  .service-page .service-flow { grid-template-columns: 1fr; margin: 36px 0; }
-  .service-page .service-flow li, .service-page .service-flow li:first-child { padding: 24px 0; }
-  .service-page .service-flow li + li { border-left: 0; border-top: 1px solid var(--line); }
   .service-page .service-vision-story h3 { font-size: 22px; }
   .service-page .service-closing { flex-direction: column; align-items: stretch; margin-top: 48px; padding-top: 36px; }
   .service-page .service-desktop-break { display: none; }
@@ -173,7 +157,7 @@
   .service-page .vision-grid, .service-page .vision-benefits, .service-page .vision-commitment { grid-template-columns: 1fr; }
   .service-page .vision-grid { gap: 40px; }
   .service-page .vision-benefits { gap: 18px; }
-  .service-page .vision-value, .service-page .vision-policy-grid, .service-page .vision-example { margin-top: 40px; padding-top: 32px; }
+  .service-page .vision-value, .service-page .vision-policy-grid { margin-top: 40px; padding-top: 32px; }
   .service-page .vision-commitment { padding: 26px 22px; gap: 26px; }
 }
 </style>
@@ -216,7 +200,7 @@
       <div class="wrap"><div class="service-hero-layout"><div class="service-hero-copy">
         <p class="kicker">Service / 設計事務所・施工会社のBIM制作支援</p>
         <h1>施工BIM・<br>Revitモデリングの<br>制作支援。<span class="en-line" lang="en">Construction BIM &amp; Revit modeling support.</span></h1>
-        <p class="service-hero-lead">設計の意図を、施工と、その先の価値へ。<br>設計事務所・施工会社のBIM制作を、今ある図面から支援します。確認したい部位や打ち合わせの目的を伺い、モデルの作成範囲と整理する資料を決めます。変更への対応範囲と期間も、案件ごとに確認して進めます。</p>
+        <p class="service-hero-lead">設計事務所・施工会社の皆さまへ。お手元の図面から、設計変更の説明に使う断面図や、現場で納まりを確かめる施工モデルを作成します。</p>
         <nav class="service-jump" aria-label="サービスの対象・相談の進め方・ビジョン">
           <a href="#for-designers">設計事務所の方へ <span aria-hidden="true">↘</span></a>
           <a href="#for-builders">施工会社の方へ <span aria-hidden="true">↘</span></a>
@@ -236,8 +220,8 @@
       <div class="wrap">
         <div class="service-section-intro">
           <p class="kicker">Who we support</p>
-          <h2 id="support-heading">それぞれの仕事に、<br>具体的に役立つBIMを。</h2>
-          <p>まずWEB会議で、何を確かめたいか、いつ必要かを伺います。<br class="service-desktop-break">モデルの制作から図面・資料の整理、変更への対応まで、必要な工程をご一緒します。</p>
+          <h2 id="support-heading">ご依頼いただける業務</h2>
+          <p>初回のWeb会議で図面を拝見し、次の打ち合わせまでに必要なモデルと資料をご提案します。</p>
         </div>
         <div class="service-audiences">
           <article class="service-audience" id="for-designers" aria-labelledby="designers-heading">
@@ -247,7 +231,7 @@
             <p>パースで完成像を伝える、その先へ。部材の位置や仕様、図面間の整合まで確認できるモデルで、設計者の検討と説明を支えます。</p>
             <ul class="service-task-list">
               <li><strong>2D図面・既存モデルからBIM化</strong><span>意匠・構造・設備の図面やモデルをもとに、Revitで必要な範囲をモデル化。設計の進捗に合わせて情報を整えます。</span></li>
-              <li><strong>確認申請用の図面・BIMデータ作成</strong><span>設計者の指示と提出先の要件に合わせて、申請用図面・BIMデータを整備。審査の指摘に伴う図面・モデルの修正も支援します。</span></li>
+              <li><strong>確認申請に向けた作図のご相談</strong><span>設計ご担当者の指示と提出先の要件をもとに、作図や修正をお手伝いできる範囲を確認します。</span></li>
               <li><strong>整合確認と、設計変更の共有</strong><span>図面の食い違いや取り合いを確認し、検討事項を整理。決定した変更をモデルと資料へ反映します。</span></li>
               <li><strong>施主説明・比較検討の資料づくり</strong><span>平面図・断面図・3D画像で、空間や仕様、変更箇所を共有。施主や専門業者との合意形成を支えます。</span></li>
             </ul>
@@ -309,7 +293,7 @@
           <div class="service-permit-next"><span aria-hidden="true">→</span><p><strong>その先は、データで審査できる対象を順次拡大。</strong><br>図面の整合をBIMで確保し、次にBIMの情報を審査へ活用する。国の工程表は、こうした段階を示しています。</p></div>
           <div class="service-permit-context">
             <div><h4>公共分野では、<br>原則とする運用も始まっています。</h4><p>国土交通省の官庁営繕では、2026年度から延べ3,000㎡以上の新営設計業務を、原則としてBIM図面審査の申請対象としています。実施の有無や申請内容などは、受発注者間で協議します。</p><p>民間建築を含む一般の建築確認では、従来の申請も利用できます。そのなかで、BIM図面審査からデータ審査へと、BIMを活用する仕組みが整備されています。</p></div>
-            <div><h4>今の案件で積む経験が、<br>次の仕事の対応力になります。</h4><p>部材の位置や仕様を入力し、図面とモデルをそろえ、変更を反映する。その実務を今から積み重ねることが、申請にも施工にも使えるBIMにつながります。</p><p>Tojo nexusは、確認申請用の図面・BIMデータ作成から、施工段階の取り合い・干渉確認まで支援。設計で整えた情報を、現場、さらに引渡し後へ生かします。</p><a class="service-text-link" href="contact.html">確認申請に向けたBIM制作を相談する <span aria-hidden="true">→</span></a></div>
+            <div><h4>申請に向けて整理する資料</h4><p>提出先が指定する図面・データ形式と、お手元の図面の改訂日をご確認ください。審査の指摘がある場合は、該当の図面と照らして修正範囲を整理できます。</p><a class="service-text-link" href="contact.html">申請図面の作図・修正を相談する <span aria-hidden="true">→</span></a></div>
           </div>
           <p class="service-permit-sources">2026年9月時点の公表資料に基づきます。制度・計画の出典：<a href="https://www.mlit.go.jp/jutakukentiku/content/001990514.pdf">BIM図面審査ガイドライン</a> ／ <a href="https://www.mlit.go.jp/jutakukentiku/build/content/001989778.pdf">BIMデータ審査の試作・工程表</a> ／ <a href="https://www.mlit.go.jp/jutakukentiku/build/content/001986721.pdf">国の示す将来像</a> ／ <a href="https://www.mlit.go.jp/gobuild/content/001733645.pdf">官庁営繕のBIM活用</a> ／ <a href="https://bimpermit.jp/qa/?type=1">制度Q&amp;A</a></p>
         </section>
@@ -321,9 +305,9 @@
         <div class="service-section-intro">
           <p class="kicker">Our vision</p>
           <h2 id="vision-heading">今、施工BIMから。<br>設計から、建物の一生へ。</h2>
-          <p class="vision-lead">施工BIMには、目の前の現場で役立つ価値があります。<br>梁とダクトの干渉や納まりを工事前に確認し、現場の確認待ちや手戻りを減らす。<br class="service-desktop-break">その実務で得たノウハウを、次の設計の天井高さ・設備配置・点検スペースの検討へ還元する。<br class="service-desktop-break">今の現場を支えながら、次の設計で先回りして課題を解く。<br class="service-desktop-break">それが、Tojo nexusが今、施工BIMに投資する理由です。</p>
+          <p class="vision-lead">施工BIMには、目の前の現場で役立つ価値があります。図面の食い違いを工事前に見つければ、現場を止めずに納まりを選べます。</p>
         </div>
-        <!-- CODEX / 2026-09-17: 背景→導入の壁→顧客の便益→政策・海外→情報継承→現在の投資を説明。 -->
+        <!-- CODEX / 2026-09-17: 背景・導入の壁・顧客の便益・国内外の動向と設計への還元を説明。 -->
         <div class="vision-grid">
           <article>
             <p class="vision-topic">01 / これまでの仕事と、これから</p>
@@ -345,12 +329,27 @@
 
         <section class="vision-value" aria-labelledby="vision-value-heading">
           <p class="vision-topic">03 / 施主・設計・施工が得るもの</p>
-          <h3 id="vision-value-heading">それぞれの仕事に、<br>今から得られる価値があります。</h3>
-          <p>施主にとって大切なのは、望む建物ができ、安心して使い続けられること。BIMでは、3Dの形に部材の仕様を結び付け、図面や数量表に使い、次の工程へ引き継げます。</p>
+          <h3 id="vision-value-heading">BIMを使うと、何が変わるか。</h3>
           <div class="vision-benefits">
-            <article><h4>施主・建物の所有者</h4><p class="vision-benefit-title">パースだけでは伝わりにくい、<br>細部までつかめる。</p><p>天井の高さ、設備の位置、壁と天井の取り合いまで、3Dや断面で確認。完成前に、細部や使い勝手を具体的にイメージできます。</p><p>納まりや仕様を事前に共有し、共通の図面・モデルを基準に施工と確認を進める。施工業者ごとの経験や解釈に品質が左右されにくい建物づくりを支えます。</p><p>完成後も、整備・更新した設備情報を点検や改修に生かせます。</p></article>
-            <article><h4>設計事務所</h4><p class="vision-benefit-title">図面をそろえ、<br>変更を伝えやすくする。</p><p>入力した位置や仕様を図面・表に反映し、図面間の食い違いや修正漏れを減らします。施主や専門業者と同じモデルを見ながら検討できます。</p><!-- CODEX / 2026-09-28: owner-requested benefit clarification. --><p>施工段階で検討が必要になる箇所も、設計段階であらかじめ可視化できます。課題を早期に共有することで、検討や調整に余裕を持って取り組めます。</p></article>
-            <article><h4>施工会社</h4><p class="vision-benefit-title">現場で困る前に、<br>取り合いを確かめる。</p><p>梁とダクト、配管と壁などの干渉を工事前に確認。図面だけでは分かりにくい納まりや未決定事項を整理し、確認待ちや手戻りを減らす判断に使えます。</p><!-- CODEX / 2026-09-28: owner-requested benefit clarification. --><p>3Dモデルから必要な箇所の図面を取り出し、周囲の部材との取り合いを立体的に示す資料へ展開できます。施主・設計者・職人が同じ資料で認識をそろえることで、説明や確認にかかる時間を減らし、現場の判断と管理に使う時間を取り戻します。</p></article>
+            <article>
+              <h4>施主・建物の所有者</h4>
+              <p class="vision-benefit-title">扉を選ぶと、<br>型番や修繕履歴をたどれる。</p>
+              <p>2Dの平面図で扉の開き方を示す円弧からは、型番までは読み取れません。BIMでは扉一枚が一つの要素です。位置・寸法・型番を登録し、その扉に点検や部品交換の記録を結び付けられます。</p>
+              <p>引き渡し後もこの建物データベースを更新し、AIの検索機能と連携すれば、「同じ型番の扉はどこにあるか」「前回いつ部品を交換したか」を普段の言葉で調べ、次の修繕計画に生かせます。</p>
+              <p>完成前には、パースで伝えにくい扉の開き方や家具との間隔も3Dで確認できます。決めた寸法と納まりを図面で共有すれば、仕上がりが施工業者ごとの経験や解釈に左右されにくくなります。</p>
+            </article>
+            <article>
+              <h4>設計事務所</h4>
+              <p class="vision-benefit-title">一か所の変更を、<br>関係する図面で確かめられる。</p>
+              <p>例えば窓の高さを変えるとき、同じ窓を平面図・立面図・建具表で照合できます。施主には室内からの見え方を示し、施工者には変更した高さを断面で伝えられます。</p>
+              <p>確認申請用の図面の作成や、指摘を受けた箇所の修正もご相談ください。設計ご担当者と対象図面を確認します。</p>
+            </article>
+            <article>
+              <h4>施工会社</h4>
+              <p class="vision-benefit-title">着工前の納まりから、<br>引き渡し後の対応まで。</p>
+              <p>梁を避けて配管をどこに通すか。断面に寸法を入れて専門業者と確認し、現場に入る前に施工する位置を決められます。</p>
+              <p>変更した配管ルートと止水弁の位置を竣工モデルに残せば、漏水の連絡を受けた保守担当者は、該当する系統と止水弁を訪問前に確認できます。当時の現場監督に聞き直す手間が減り、修理の手配を早められます。</p>
+            </article>
           </div>
         </section>
 
@@ -359,7 +358,7 @@
             <p class="vision-topic">04 / 国がBIMを推進する理由</p>
             <h3>少ない人数でも、<br>建物の品質を支えるために。</h3>
             <p>国がBIMを推進する背景には、人口減少と高齢化があります。設計・施工・維持管理で情報をつくり直す作業を減らし、早い段階で問題を見つけ、次の担当者へ情報を引き継ぐ。建物の一生を通じた生産性の向上を目指しています。</p>
-            <p>そのために、建築確認でBIMを使う制度や、情報を受け渡す共通ルールの整備を進めています。官庁営繕での原則適用、2026年のBIM図面審査、2029年予定のBIMデータ審査は、その具体的な動きです。</p>
+            <p>設計者と審査者が同じ情報を使えるようにする建築確認の見直しも、その一例です。</p>
             <a class="service-text-link" href="#bim-permit-roadmap">原則適用の対象と、確認申請の段階を見る <span aria-hidden="true">↑</span></a>
           </article>
           <article>
@@ -367,29 +366,17 @@
             <h3>調達や申請の仕組みに、<br>BIMを組み込む国々。</h3>
             <dl class="vision-world">
               <div><dt>英国｜中央政府の公共調達</dt><dd>2016年からBIMを要件化。設計・施工から維持管理まで、情報を活用するための仕組みを進めています。<a href="https://www.gov.uk/government/publications/transforming-infrastructure-performance-roadmap-to-2030/transforming-infrastructure-performance-roadmap-to-2030#annex-b-information-management-mandate">英国政府の方針</a></dd></div>
-              <div><dt>シンガポール｜一定規模以上の建築申請</dt><dd>2025年10月から、延べ面積3万㎡以上の新規案件でBIMを活用する統合申請制度「CORENET X」を義務化。2026年10月には5,000㎡以上の新規案件へ対象が広がる予定です。<a href="https://www.ura.gov.sg/guidelines/circulars/dc26-08/">BCA・URAの実施計画</a></dd></div>
+              <div><dt>シンガポール｜一定規模以上の建築申請</dt><dd>2025年10月から、延べ面積3万㎡以上の新規案件でBIMを活用する統合申請制度「CORENET X」を義務化。2026年10月からは延べ面積5,000㎡以上の新規案件が対象です。<a href="https://www.ura.gov.sg/guidelines/circulars/dc26-08/">BCA・URAの実施計画</a></dd></div>
             </dl>
           </article>
         </div>
 
-        <section class="vision-example" aria-labelledby="vision-example-heading">
-          <p class="vision-topic">06 / 設計からつながるBIMとは</p>
-          <h3 id="vision-example-heading">天井裏の空調設備で考える、<br>情報の引き継ぎ。</h3>
-          <p>「つながる」とは、設計で決めた情報を施工で詳しくし、竣工時に実物へ合わせ、点検や改修へ引き継ぐこと。工程が変わるたびに、同じ情報を調べ直す手間を減らします。</p>
-          <ol class="service-flow" aria-label="空調設備の情報を設計から施工・維持管理へ引き継ぐ例">
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" class="bim-flow-art" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M65 99 150 63 235 99 150 135Z" fill="#c9b48a" fill-opacity=".035" stroke="none"/><g opacity=".2" stroke-dasharray="2.5 4"><path d="M65 99 150 63 235 99M150 15V63"/><path d="M107.5 117 192.5 81M107.5 81 192.5 117"/></g><g stroke="#c9b48a" opacity=".7"><path class="flow-draw" pathLength="1" d="M77 99 150 68 223 99 150 130Z"/><path class="flow-draw" pathLength="1" d="M104 87 145 104M156 109 190 123M177 80 150 91M137 96 112 107"/><path d="M137 96c4.6 1.9 9.5 1.7 13-5M145 104c-1.8 4.1 2.7 7.1 11 5" opacity=".55"/></g><g opacity=".48"><path class="flow-draw" pathLength="1" d="M65 99V51L150 15 235 51V99L150 135Z"/><path class="flow-draw" pathLength="1" d="M65 51 150 87 235 51M150 87V135"/></g><g opacity=".3" stroke-dasharray="2.5 4"><path d="M65 99 60 109M150 135 145 145M235 99 240 109M150 135 155 145"/></g><g stroke="#c9b48a" opacity=".65"><path class="flow-draw" pathLength="1" d="M61 112 140 146M160 146 239 112"/><path d="m58 115 6-6m73 40 6-6m14 0 6 6m73-40 6 6"/><path class="flow-draw" pathLength="1" d="M93 39 178 75M122 27 207 63M93 63 178 27M122 75 207 39" opacity=".3"/></g><g fill="#c9b48a" stroke="none"><circle cx="65" cy="51" r="1.8"/><circle cx="150" cy="15" r="1.8"/><circle cx="235" cy="51" r="1.8"/><circle cx="150" cy="87" r="1.8"/></g></svg><span class="service-step" aria-hidden="true">DESIGN / 設計</span><h4>高さと配置を検討する。</h4><p>天井の高さ、機器の位置、梁やダクトの通り道を同じモデルで検討します。</p><small>引き継ぐ情報：設計意図・空間・仕様</small></li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" class="bim-flow-art" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M65 99 150 63 235 99 150 135Z" fill="#c9b48a" fill-opacity=".035" stroke="none"/><g opacity=".2" stroke-dasharray="2.5 4"><path d="M65 99 150 63 235 99M150 15V63"/><path d="M107.5 117 192.5 81M107.5 81 192.5 117"/></g><g opacity=".26"><path class="flow-draw" pathLength="1" d="M93 63V111M122 75V123M178 75V123M207 63V111"/><path class="flow-draw" pathLength="1" d="M65 75 150 111 235 75"/></g><g stroke="#c9b48a" stroke-width="1.7"><path class="flow-draw" pathLength="1" d="M135 52 188 75 146 93"/><path class="flow-draw" pathLength="1" d="M158 62 120 78"/></g><g stroke="#c9b48a" opacity=".48"><path class="flow-draw" pathLength="1" d="M137 49 194 73 151 94M132 54 182 76 143 91"/><path class="flow-draw" pathLength="1" d="M155 60 117 76 117 80 122 82 125 78"/><path d="m143 52-2 5m20 3-2 5m22 4-2 5m-8 9 5 2m-19 5 5 2"/></g><g opacity=".5"><path class="flow-draw" pathLength="1" d="M98 37V59M179 28V67M210 40V78"/><path d="m95 58 6 3m75 5 6 3m26 8 5 2"/></g><g opacity=".48"><path class="flow-draw" pathLength="1" d="M65 99V51L150 15 235 51V99L150 135Z"/><path class="flow-draw" pathLength="1" d="M65 51 150 87 235 51M150 87V135"/></g><g opacity=".4"><path class="flow-draw" pathLength="1" d="M65 54 150 90 235 54"/><path d="M93 63v3m29 9v3m56-3v3m29-15v3"/></g><g stroke="#c9b48a" opacity=".8"><path class="flow-draw" pathLength="1" d="M57 122 74 129 89 123 72 116Z"/><path class="flow-draw" pathLength="1" d="M57 126 74 133 89 127M57 130 74 137 89 131"/></g><g opacity=".2"><path d="M51 99h8m-4-4v8M241 99h8m-4-4v8M146 145h8m-4-4v8"/></g></svg><span class="service-step" aria-hidden="true">CONSTRUCTION / 施工</span><h4>納まりと変更を反映する。</h4><p>実際に使う機器や配管・ダクトで取り合いを確かめ、決定した変更をモデルへ反映します。</p><small>引き継ぐ情報：施工の詳細・変更内容</small></li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" class="bim-flow-art" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M65 99 150 63 235 99 150 135Z" fill="#c9b48a" fill-opacity=".035" stroke="none"/><g opacity=".2" stroke-dasharray="2.5 4"><path d="M65 99 150 63 235 99M150 15V63"/><path d="M107.5 117 192.5 81M107.5 81 192.5 117"/></g><g opacity=".2" fill="#c9b48a" fill-opacity=".04"><path class="flow-draw" pathLength="1" d="M79 64 107 76V106L79 94Z"/><path class="flow-draw" pathLength="1" d="M116 80 140 90V120L116 110Z"/><path d="M93 70v30m35-15v30M79 84l28 12m9 4 24 10"/></g><g stroke="#c9b48a" opacity=".45"><path class="flow-draw" pathLength="1" d="M132 52 187 75 170 83"/><path class="flow-draw" pathLength="1" d="M132 56 181 77 166 84"/><path d="M160 64v17m22-7v14"/></g><g stroke="#c9b48a"><path class="flow-draw" pathLength="1" d="M171 85 191 94 167 104 147 96Z" fill="#c9b48a" fill-opacity=".08"/><path class="flow-draw" pathLength="1" d="M147 96V112L167 121 191 111V94M167 104V121"/><path d="M173 108l12-5m-12 9 12-5m-12 9 12-5" opacity=".6"/><ellipse cx="157" cy="106.8" rx="4" ry="5.2" transform="rotate(-22 157 106.8)" opacity=".75"/><path d="m155 103 4 7m-5-5 6 3" opacity=".55"/></g><g opacity=".48"><path class="flow-draw" pathLength="1" d="M65 99V51L150 15 235 51V99L150 135Z"/><path class="flow-draw" pathLength="1" d="M65 51 150 87 235 51M150 87V135"/></g><g opacity=".35"><path class="flow-draw" pathLength="1" d="M151 121 132 129 149 136 168 128Z"/><path d="m139 131 10-4m-5 6 10-4"/></g><g stroke="#c9b48a"><path class="flow-draw" pathLength="1" d="M188 88 251 60V48" opacity=".6"/><circle cx="251" cy="34" r="14" fill="#c9b48a" fill-opacity=".035"/><path class="flow-draw" pathLength="1" d="m245 34 4 4 8-9" stroke-width="1.8"/></g><g opacity=".2"><path d="M51 99h8m-4-4v8M241 99h8m-4-4v8M146 145h8m-4-4v8"/></g></svg><span class="service-step" aria-hidden="true">OPERATIONS / 完成後</span><h4>点検・交換で情報を使う。</h4><p>竣工状態に合わせた機器の型番や位置、点検口の情報を、点検・交換・改修へ。修繕履歴も更新します。</p><small>蓄えていく情報：設備情報・修繕履歴</small></li>
-          </ol>
-          <p class="vision-example-note">各段階で必要な情報と受け渡し方を決め、完成後も更新を続ける。担当者や管理会社が変わっても、建物の知識を引き継ぐための土台になります。</p>
-        </section>
-
         <div class="vision-commitment">
           <div><p class="vision-topic">Our commitment / Tojo nexusの取り組み</p><h3>だから今、施工BIM。<br><span class="service-title-phrase">その経験を、</span><span class="service-title-phrase">設計の早い段階へ。</span></h3></div>
-          <div><p>例えば、梁とダクトが干渉して予定の天井高さを確保できない。設備は置けても、機器の点検スペースや交換時の搬出経路を確保できない。施工BIMでは、機器の仕様を踏まえてこうした問題を工事前に確認し、関係者が調整できる資料にします。現場で工事を止めたり、施工した部分をやり直したりする手間を減らす支援です。</p><p>そこで得たノウハウを、次の設計へ還元します。天井内に必要なスペース、設備や配管の配置、点検口の位置・大きさや搬出経路を、設計者が早い段階で検討できるようにする。そのために、Tojo nexusは施工BIMの技術と制作体制へ投資しています。設計事務所へのBIM制作支援も、現在提供しています。</p><p class="vision-commitment-line">現場の知見を、次の設計へ。<br>建物の情報を、使い続ける価値へ。</p><a class="service-text-link" href="contact.html">今の案件から、BIMの使い方を相談する <span aria-hidden="true">→</span></a></div>
+          <div><p>例えば、施工中にポンプの交換に必要な搬出幅が足りないと分かったら、次の設計では機器の寸法と一緒に、扉の有効幅や通路の曲がり角も確かめます。</p><p>私たちが施工BIMに投資するのは、こうした現場の気づきを設計の検討項目に戻し、間取りや設備配置を選べる段階で役立てるためです。</p><a class="service-text-link" href="contact.html">今の案件から、BIMの使い方を相談する <span aria-hidden="true">→</span></a></div>
         </div>
 
-        <details class="service-policy"><summary>調査・制度の根拠と適用範囲 <span>2026年9月時点</span></summary><p>国内の導入課題・効果は国土交通省の調査とガイドラインを参照しています。効果は用途・情報の整備状況・運用によって変わるため、Tojo nexusでは案件に必要な範囲から支援内容を決めます。</p><p>官庁営繕の原則適用と、一般の建築確認で利用できるBIM審査制度は対象が異なります。従来の確認申請も利用でき、2029年のBIMデータ審査の対象・詳細は検討中です。シンガポールの記載は2026年7月改定の計画に基づき、5,000㎡未満は任意、旧制度で申請中の案件は当面継続可能です。</p><p class="service-policy-sources">国内の根拠：<a href="https://www.mlit.go.jp/jutakukentiku/content/001882625.pdf">国土交通省・BIM活用実態調査</a> ／ <a href="https://www.mlit.go.jp/jutakukentiku/content/002012930.pdf">BIM標準ワークフロー・ガイドライン第3版</a> ／ <a href="https://www.mlit.go.jp/gobuild/content/001733645.pdf">官庁営繕のBIM活用</a> ／ <a href="https://bimpermit.jp/qa/?type=1">建築確認の制度Q&amp;A</a></p></details>
+        <details class="service-policy"><summary>調査・制度の根拠と適用範囲 <span>2026年9月時点</span></summary><p>国内の導入課題・効果は国土交通省の調査とガイドラインを参照しています。効果は用途・情報の整備状況・運用によって変わるため、Tojo nexusでは案件に必要な範囲から支援内容を決めます。</p><p>官庁営繕の原則適用と、一般の建築確認で利用できるBIM審査制度は対象が異なります。従来の確認申請も利用でき、2029年のBIMデータ審査の対象・詳細は検討中です。シンガポールの記載は2026年7月改定の計画に基づき、5,000㎡未満は任意、旧制度で申請中の案件は当面継続可能です。</p><p class="service-policy-sources">維持管理の研究例：<a href="https://www.mdpi.com/1424-8220/21/14/4771">BIMの設備情報と点検記録を対話形式で検索する実証研究</a></p><p class="service-policy-sources">国内の根拠：<a href="https://www.mlit.go.jp/jutakukentiku/content/001882625.pdf">国土交通省・BIM活用実態調査</a> ／ <a href="https://www.mlit.go.jp/jutakukentiku/content/002012930.pdf">BIM標準ワークフロー・ガイドライン第3版</a> ／ <a href="https://www.mlit.go.jp/gobuild/content/001733645.pdf">官庁営繕のBIM活用</a> ／ <a href="https://bimpermit.jp/qa/?type=1">建築確認の制度Q&amp;A</a></p></details>
       </div>
     </section>
 
@@ -406,15 +393,15 @@
           <div class="hub">
             <p class="kicker">Da Nang</p>
             <h3>制作チーム<span class="en-line" lang="en">Production team</span></h3>
-            <p>時差約2時間。代表が現地で制作と品質を確認します。費用は、対象範囲・モデルの精度・納期に応じて個別にご提案します。</p>
+            <p>時差約2時間。代表が現地で制作と品質を確認します。</p>
             <p>ダナン（連絡先）<br><span lang="en">Contact address in Vietnam</span><br>3F, Indochina Riverside Office Tower<br>74 Bạch Đằng, Hải Châu, Đà Nẵng 550000</p>
-            <p class="en-copy" lang="en">A two-hour time difference, with the CEO overseeing production and quality locally. Fees reflect the agreed scope, level of detail, and schedule.</p>
+            <p class="en-copy" lang="en">A two-hour time difference, with the CEO overseeing production and quality locally.</p>
           </div>
         </div>
         
-        <section class="service-faq" id="request-guide"><h2>BIM制作を相談するときに、<br>最初に揃えること。</h2><p class="detail-note">まずは手元の図面と、設計・施工で確認したいことをお聞かせください。目的・範囲・必要な日から、制作と支援の条件を整理します。</p>
+        <section class="service-faq" id="request-guide"><h2>BIM制作のご相談前に</h2>
         <details><summary>2D CAD中心の設計事務所でも依頼できますか。</summary><p>はい。今ある2D図面から、確認したい範囲をBIM化できます。社内の設計環境を一度に切り替える必要はありません。設計意図、検討中の仕様、必要な図面・3D資料を伺い、設計者の判断に役立つモデルを整えます。既存のBIMモデルがある場合も、データを確認して支援範囲をご相談します。</p></details>
-        <details><summary>確認申請用の図面・BIMデータも依頼できますか。</summary><p>はい。設計者の指示と提出先の要件に沿って、確認申請用の図面・BIMデータの作成を支援します。BIM図面審査を利用する場合は、PDF図面と補足情報となるIFCデータなどを整えます。必要な申請書類、提出形式、審査の指摘に伴う修正範囲を事前に確認します。<a href="https://www.icba.or.jp/bim/">BIM図面審査の制度概要</a>もご覧ください。</p></details>
+        <details><summary>確認申請の図面について相談するとき、何を用意すればよいですか。</summary><p>対象図面と提出先の作成要領をご用意ください。修正のご相談には、審査の指摘事項もあるとスムーズです。BIM図面審査で扱うPDF図面やIFCデータは、<a href="#bim-permit-roadmap">確認申請とBIMの解説</a>と<a href="https://www.icba.or.jp/bim/">制度の公式案内</a>をご参照ください。</p></details>
         <details><summary>相談前に、どの図面や情報を用意すればいいですか。</summary><p>意匠・構造・設備の図面、各図面の改訂日、既存モデルがあればそのデータをご用意ください。合わせて、確認したい階・部位、未決定事項、打ち合わせ日、必要な成果物を共有いただくと、範囲を整理しやすくなります。不足する資料がある場合は、その状態からご相談ください。</p></details>
         <details><summary>配管と梁など、一部の取り合いだけでも相談できますか。</summary><p>対象の部位と、その周囲のどこまでを確認する必要があるかを伺い、制作範囲を検討します。全体を一度につくるか、優先する箇所から進めるかも含めて整理します。<a href="bim-clash-detection.html">干渉チェックで確認する内容と、質疑のまとめ方</a>もご覧ください。</p></details>
         <details><summary>費用と納期は、何によって変わりますか。</summary><p>対象の規模・部位、元図の揃い具合、モデルに必要な詳しさ、図面や質疑一覧などの成果物、変更を反映する範囲、希望日によって変わります。確認内容を揃えてから、案件ごとにお見積りします。</p></details>
